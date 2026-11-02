@@ -52,3 +52,4 @@ free2pay/
 - **HTML5**
 - **CSS3**
 - **Font Awesome 6** (Icons)
+
