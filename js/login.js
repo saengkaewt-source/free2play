@@ -23,7 +23,7 @@
                 <!-- ฟอร์มเข้าสู่ระบบ -->
                 <form class="login-form" id="loginForm">
                     <div class="input-group">
-                        <input type="email" class="input-field" placeholder="E-mail..." required autocomplete="email">
+                        <input type="text" class="input-field" placeholder="E-mail..." required autocomplete="email">
                     </div>
 
                     <div class="box-password">
@@ -96,7 +96,7 @@
         const overlay = document.getElementById('loginOverlay');
 
         // ลบ required ออกจาก email เพื่อให้กด login ได้โดยไม่มี native validation
-        const emailInputEl = overlay.querySelector('input[type="email"]');
+        const emailInputEl = overlay.querySelector('input[type="text"]');
         if (emailInputEl) emailInputEl.removeAttribute('required');
         const passInputEl = overlay.querySelector('input[type="password"]');
         if (passInputEl) passInputEl.removeAttribute('required');
@@ -110,7 +110,7 @@
             overlay.classList.add('active');
             overlay.setAttribute('aria-hidden', 'false');
             document.body.classList.add('no-scroll');
-            const emailInput = overlay.querySelector('input[type="email"]');
+            const emailInput = overlay.querySelector('input[type="text"]');
             if (emailInput) setTimeout(() => emailInput.focus(), 150);
         }
 
@@ -186,7 +186,7 @@
         if (form) {
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                const email = form.querySelector('input[type="email"]').value;
+                const email = form.querySelector('input[type="text"]').value;
                 const password = passInput ? passInput.value : '';
                 const interests = [...overlay.querySelectorAll('.tag-pill.active')].map(t => t.textContent.trim());
                 const role = overlay.querySelector('.role-pill.active')?.textContent.trim() || null;
