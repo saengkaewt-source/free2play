@@ -98,6 +98,8 @@
         // ลบ required ออกจาก email เพื่อให้กด login ได้โดยไม่มี native validation
         const emailInputEl = overlay.querySelector('input[type="email"]');
         if (emailInputEl) emailInputEl.removeAttribute('required');
+        const passInputEl = overlay.querySelector('input[type="password"]');
+        if (passInputEl) passInputEl.removeAttribute('required');
         const closeBtn = document.getElementById('loginClose');
         const form = document.getElementById('loginForm');
         const passInput = document.getElementById('loginPass');
