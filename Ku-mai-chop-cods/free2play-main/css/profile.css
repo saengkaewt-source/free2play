@@ -1,0 +1,766 @@
+/* =====================================================
+   Free2Pay – profile.css (ตรงกับ profile___ไลฟ___1_.png)
+   ใช้ร่วมกับ style.css + search.css
+   (การ์ดโปรไฟล์ / Feedback / ปฏิทิน มาจาก search.css)
+   หน่วย "N * var(--p)" = N px ของแบบที่กว้าง 931px
+   ===================================================== */
+:root {
+    --p: calc(100vw / 931);
+}
+
+/* ---------- ปฏิทินเปิดค้าง: เว้นช่องก่อนสมุดสีม่วง ---------- */
+.profile-cal.calendar-portfolio-section {
+    padding-bottom: calc(154 * var(--p));
+}
+
+/* =====================================================
+   FEED (สมุดสีม่วงน้ำเงิน)
+   ===================================================== */
+.feed-section {
+    position: relative;
+    height: calc(1009 * var(--p));
+    background: var(--violet);
+}
+
+/* แท็บมุมขวาบน */
+.feed-section::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: calc(-62 * var(--p));
+    width: calc(311 * var(--p));
+    height: calc(62 * var(--p));
+    background: var(--violet);
+    border-radius: 0 calc(18 * var(--p)) 0 0;
+    clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ไอคอนแชตมุมซ้ายบน */
+.feed-chat {
+    position: absolute;
+    left: calc(70 * var(--p));
+    top: calc(32 * var(--p));
+    font-size: calc(41 * var(--p));
+    line-height: 1;
+    color: var(--sky);
+}
+
+/* สติ๊กเกอร์ ee */
+.feed-sticker {
+    position: absolute;
+    left: calc(580 * var(--p));
+    top: calc(-39 * var(--p));
+    width: calc(120 * var(--p));
+    height: auto;
+    z-index: 4;
+}
+
+/* โพลารอยด์ */
+.feed-polaroid {
+    position: absolute;
+    left: calc(708 * var(--p));
+    top: calc(-54 * var(--p));
+    width: calc(136 * var(--p));
+    height: calc(166 * var(--p));
+    padding: calc(8 * var(--p));
+    background: var(--sky);
+    transform: rotate(5deg);
+    box-shadow: 0 calc(3 * var(--p)) calc(8 * var(--p)) rgba(0, 0, 0, .25);
+    z-index: 5;
+}
+
+.feed-polaroid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* คลิปหนีบกระดาษ */
+.feed-clip {
+    position: absolute;
+    left: calc(831 * var(--p));
+    top: calc(79 * var(--p));
+    width: calc(24 * var(--p));
+    height: calc(72 * var(--p));
+    z-index: 6;
+    filter: drop-shadow(0 calc(2 * var(--p)) calc(2 * var(--p)) rgba(0, 0, 0, .25));
+}
+
+/* ---------- กระดาษสมุด ---------- */
+.notebook {
+    position: absolute;
+    left: calc(58 * var(--p));
+    top: calc(102 * var(--p));
+    width: calc(815 * var(--p));
+    height: calc(813 * var(--p));
+    background: #fff;
+    box-shadow: 0 calc(-2 * var(--p)) calc(4 * var(--p)) rgba(0, 0, 0, .15);
+    overflow: hidden;
+}
+
+/* รูรูปวงกลมของสมุด */
+.notebook::before {
+    content: "";
+    position: absolute;
+    left: calc(17 * var(--p));
+    top: calc(20 * var(--p));
+    bottom: 0;
+    width: calc(30 * var(--p));
+    background: radial-gradient(circle at 50% 50%, var(--violet) 0 calc(15 * var(--p)), transparent calc(15.5 * var(--p))) 0 0 / calc(30 * var(--p)) calc(72.5 * var(--p)) repeat-y;
+}
+
+/* ไล่เฉดจางลงด้านล่าง */
+.notebook::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(120 * var(--p));
+    background: linear-gradient(to bottom, rgba(98, 114, 246, 0), var(--violet));
+    pointer-events: none;
+    z-index: 8;
+}
+
+/* เส้นบรรทัด */
+.notebook-lines {
+    position: absolute;
+    left: calc(69 * var(--p));
+    right: calc(30 * var(--p));
+    top: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(to bottom, transparent 0 calc(48.3 * var(--p)), #dce8f8 calc(48.3 * var(--p)) calc(50.3 * var(--p)));
+    background-position: 0 calc(7 * var(--p));
+}
+
+/* ---------- โพสต์ (ซ้าย) ---------- */
+.feed-posts {
+    position: absolute;
+    left: calc(76 * var(--p));
+    top: calc(51 * var(--p));
+    width: calc(331 * var(--p));
+    z-index: 2;
+}
+
+.post {
+    margin-bottom: calc(33 * var(--p));
+}
+
+.post-head {
+    display: flex;
+    align-items: center;
+    gap: calc(7 * var(--p));
+}
+
+.post-avatar {
+    width: calc(60 * var(--p));
+    height: calc(60 * var(--p));
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.post-name {
+    font-size: calc(23 * var(--p));
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--orange);
+}
+
+.post-cat {
+    font-size: calc(16 * var(--p));
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--plum);
+}
+
+.post-text {
+    margin: calc(12 * var(--p)) 0 0;
+    padding-left: calc(14 * var(--p));
+    font-size: calc(12.5 * var(--p));
+    line-height: 1.52;
+    color: #111;
+}
+
+.post-img {
+    display: block;
+    width: 100%;
+    height: calc(221 * var(--p));
+    margin-top: calc(11 * var(--p));
+    object-fit: cover;
+}
+
+.post-text+.post-img {
+    margin-top: calc(11 * var(--p));
+}
+
+.post-img-2 {
+    background: url('../images/profile-post-2.png') top center / 100% auto no-repeat, #e9ecfb;
+}
+
+/* ---------- กล่องโพสต์ผลงาน (ปักหมุด) ---------- */
+.composer {
+    position: absolute;
+    left: calc(444 * var(--p));
+    top: calc(39 * var(--p));
+    width: calc(335 * var(--p));
+    height: calc(369 * var(--p));
+    padding: calc(20 * var(--p)) calc(30 * var(--p)) 0 calc(31 * var(--p));
+    background: var(--pink);
+    box-shadow: 0 calc(4 * var(--p)) calc(5 * var(--p)) rgba(0, 0, 0, .28);
+    z-index: 3;
+}
+
+.pin {
+    position: absolute;
+    left: calc(-14 * var(--p));
+    top: calc(-24 * var(--p));
+    width: calc(24 * var(--p));
+    height: calc(24 * var(--p));
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ea6a4d, #c4442a);
+    box-shadow: calc(2 * var(--p)) calc(3 * var(--p)) calc(4 * var(--p)) rgba(0, 0, 0, .25);
+}
+
+.pin::after {
+    content: "";
+    position: absolute;
+    left: calc(15 * var(--p));
+    top: calc(19 * var(--p));
+    width: calc(3 * var(--p));
+    height: calc(14 * var(--p));
+    background: #b9b9c4;
+    transform: rotate(-35deg);
+    transform-origin: top center;
+    z-index: -1;
+}
+
+.composer-head {
+    display: flex;
+    align-items: center;
+    gap: calc(14 * var(--p));
+}
+
+.composer-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(40 * var(--p));
+    height: calc(40 * var(--p));
+    border-radius: 50%;
+    background: var(--orange);
+    color: #fff;
+    font-size: calc(30 * var(--p));
+}
+
+.composer-name {
+    font-size: calc(21 * var(--p));
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--orange);
+}
+
+.composer-cat {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(4 * var(--p));
+    height: calc(20 * var(--p));
+    margin-top: calc(2 * var(--p));
+    padding: 0 calc(10 * var(--p));
+    border-radius: 99px;
+    background: #ffeded;
+    color: #ffc9c9;
+    font-size: calc(12 * var(--p));
+    font-weight: 600;
+}
+
+.composer-box {
+    position: relative;
+    height: calc(207 * var(--p));
+    margin-top: calc(18 * var(--p));
+    background: #fff;
+}
+
+.composer-box::before {
+    content: "";
+    position: absolute;
+    left: calc(11 * var(--p));
+    top: calc(17 * var(--p));
+    width: calc(2.5 * var(--p));
+    height: calc(15 * var(--p));
+    background: var(--orange);
+}
+
+.composer-box textarea {
+    width: 100%;
+    height: calc(150 * var(--p));
+    padding: calc(14 * var(--p)) calc(12 * var(--p)) 0 calc(17 * var(--p));
+    resize: none;
+    font-size: calc(12 * var(--p));
+    color: var(--ink);
+}
+
+.composer-box textarea::placeholder {
+    color: var(--orange);
+}
+
+.composer-tools {
+    position: absolute;
+    left: calc(11 * var(--p));
+    right: calc(12 * var(--p));
+    bottom: calc(12 * var(--p));
+    display: flex;
+    align-items: center;
+    gap: calc(10 * var(--p));
+    color: var(--orange);
+    font-size: calc(21 * var(--p));
+}
+
+.composer-tools button {
+    position: relative;
+    color: var(--orange);
+    line-height: 1;
+}
+
+.btn-attach::after {
+    content: "+";
+    position: absolute;
+    right: calc(-5 * var(--p));
+    top: calc(-6 * var(--p));
+    font-size: calc(12 * var(--p));
+    font-weight: 700;
+}
+
+.btn-addbox {
+    margin-left: auto;
+}
+
+.btn-post {
+    position: absolute;
+    right: calc(30 * var(--p));
+    bottom: calc(21 * var(--p));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(6 * var(--p));
+    width: calc(124 * var(--p));
+    height: calc(34 * var(--p));
+    border-radius: 99px;
+    background: var(--orange);
+    color: #fff;
+    font-size: calc(18 * var(--p));
+    font-weight: 600;
+    box-shadow: 0 calc(3 * var(--p)) calc(5 * var(--p)) rgba(0, 0, 0, .28);
+    transition: transform .2s, filter .2s;
+}
+
+.btn-post:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+/* ---------- ผลงานฝั่งขวา (เลื่อนได้) ---------- */
+.art-scroll {
+    position: absolute;
+    left: calc(485 * var(--p));
+    top: calc(441 * var(--p));
+    width: calc(286 * var(--p));
+    height: calc(326 * var(--p));
+    overflow-y: auto;
+    z-index: 2;
+    scrollbar-width: thin;
+    scrollbar-color: var(--sky) transparent;
+}
+
+.art {
+    display: block;
+    width: calc(253 * var(--p));
+    height: calc(196 * var(--p));
+    margin-bottom: calc(16 * var(--p));
+    object-fit: cover;
+}
+
+.art-2 {
+    background: url('../images/profile-art-2.png') top center / 100% auto no-repeat, #cdf52f;
+}
+
+.art-scroll::-webkit-scrollbar {
+    width: calc(10 * var(--p));
+}
+
+.art-scroll::-webkit-scrollbar-track {
+    background: linear-gradient(to right, transparent calc(3 * var(--p)), var(--violet) calc(3 * var(--p)), var(--violet) calc(7 * var(--p)), transparent calc(7 * var(--p)));
+}
+
+.art-scroll::-webkit-scrollbar-thumb {
+    background: var(--sky);
+    border-radius: 99px;
+}
+
+/* ---------- จอเล็ก: ย่อทั้งหน้าตามสัดส่วนเดิม ---------- */
+
+
+/* ---------- ซ่อนบนเดสก์ท็อป (ใช้เฉพาะมือถือ) ---------- */
+.post-date,
+.composer-title {
+    display: none;
+}
+
+/* =====================================================
+   MOBILE (≤ 560px) – ตรงกับ iPhone 14 Plus (428px)
+   "N * var(--m)" = N px ของแบบกว้าง 428px
+   ===================================================== */
+@media (max-width: 560px) {
+    :root {
+        --m: calc(100vw / 428);
+    }
+
+    /* ---------- 2. ปฏิทิน ---------- */
+    .profile-cal.calendar-portfolio-section {
+        padding: 0 calc(22 * var(--m)) calc(63 * var(--m));
+    }
+
+    .calendar-bar {
+        height: calc(28 * var(--m));
+        padding: 0 calc(12 * var(--m)) 0 calc(10 * var(--m));
+        border-radius: calc(4 * var(--m)) calc(4 * var(--m)) 0 0;
+    }
+
+    .calendar-bar-left {
+        gap: calc(8 * var(--m));
+        font-size: calc(12 * var(--m));
+    }
+
+    .calendar-bar-left i {
+        font-size: calc(17 * var(--m));
+    }
+
+    .calendar-bar-right {
+        gap: calc(12 * var(--m));
+    }
+
+    .calendar-bar-right button {
+        font-size: calc(14 * var(--m));
+    }
+
+    .calendar-bar-right .icon-tri::before {
+        font-size: calc(18 * var(--m));
+    }
+
+    .calendar-panel {
+        border-radius: 0 0 calc(28 * var(--m)) calc(28 * var(--m));
+        padding: 0 calc(14 * var(--m)) calc(21 * var(--m));
+    }
+
+    .cal-head {
+        height: calc(36 * var(--m));
+        padding: calc(4 * var(--m)) calc(4 * var(--m)) 0 calc(17 * var(--m));
+    }
+
+    .cal-month {
+        gap: calc(5 * var(--m));
+        font-size: calc(12 * var(--m));
+    }
+
+    .cal-month .icon-tri::before {
+        font-size: calc(11 * var(--m));
+    }
+
+    .btn-hire {
+        gap: calc(5 * var(--m));
+        height: calc(17 * var(--m));
+        padding: 0 calc(9 * var(--m));
+        font-size: calc(11 * var(--m));
+    }
+
+    .btn-hire i {
+        font-size: calc(11 * var(--m));
+    }
+
+    .cal-line {
+        height: calc(3 * var(--m));
+        margin: 0 calc(2 * var(--m)) 0 calc(17 * var(--m));
+    }
+
+    .cal-weekdays,
+    .cal-grid {
+        grid-template-columns: repeat(7, calc(50 * var(--m)));
+    }
+
+    .cal-weekdays {
+        margin-top: calc(9 * var(--m));
+        height: calc(30 * var(--m));
+        font-size: calc(10 * var(--m));
+    }
+
+    .cal-grid {
+        padding-top: calc(9 * var(--m));
+    }
+
+    .cal-day {
+        height: calc(38 * var(--m));
+        font-size: calc(11 * var(--m));
+    }
+
+    .cal-day b {
+        width: calc(26 * var(--m));
+        height: calc(26 * var(--m));
+    }
+
+    .cal-day.range-start::before,
+    .cal-day.range-mid::before,
+    .cal-day.range-end::before {
+        height: calc(22 * var(--m));
+        margin-top: calc(-11 * var(--m));
+    }
+
+    .cal-note {
+        width: calc(327 * var(--m));
+        margin: calc(1 * var(--m)) 0 0 calc(19 * var(--m));
+    }
+
+    .cal-note-tag {
+        height: calc(18 * var(--m));
+        padding: 0 calc(10 * var(--m));
+        margin-bottom: calc(-2 * var(--m));
+        font-size: calc(11 * var(--m));
+    }
+
+    .cal-note-box {
+        height: calc(40 * var(--m));
+        padding: 0 calc(10 * var(--m)) 0 calc(26 * var(--m));
+        font-size: calc(12 * var(--m));
+    }
+
+    .cal-note-box button {
+        font-size: calc(18 * var(--m));
+    }
+
+    /* ---------- 3. ฟีด (สมุดสีม่วงน้ำเงิน) ---------- */
+    .feed-section {
+        height: calc(1092 * var(--m));
+    }
+
+    .feed-section::before {
+        top: calc(-25 * var(--m));
+        width: calc(145 * var(--m));
+        height: calc(25 * var(--m));
+        border-radius: calc(14 * var(--m)) 0 0 0;
+        clip-path: none;
+    }
+
+    .feed-chat {
+        left: calc(22 * var(--m));
+        top: calc(14 * var(--m));
+        font-size: calc(22 * var(--m));
+    }
+
+    .feed-sticker {
+        left: calc(228 * var(--m));
+        top: calc(-13 * var(--m));
+        width: calc(67 * var(--m));
+    }
+
+    .feed-polaroid {
+        left: calc(312 * var(--m));
+        top: calc(-41 * var(--m));
+        width: calc(100 * var(--m));
+        height: calc(118 * var(--m));
+        padding: calc(6 * var(--m));
+    }
+
+    .feed-clip {
+        left: calc(378 * var(--m));
+        top: calc(50 * var(--m));
+        width: calc(20 * var(--m));
+        height: calc(60 * var(--m));
+    }
+
+    .notebook {
+        left: calc(20 * var(--m));
+        top: calc(75 * var(--m));
+        width: calc(388 * var(--m));
+        height: calc(734 * var(--m));
+        overflow: visible;
+    }
+
+    .notebook::before {
+        left: calc(5 * var(--m));
+        top: 0;
+        width: calc(25 * var(--m));
+        background: radial-gradient(circle at 50% 50%, var(--violet) 0 calc(12.5 * var(--m)), transparent calc(13 * var(--m))) 0 calc(-13.3 * var(--m)) / calc(25 * var(--m)) calc(60.6 * var(--m)) repeat-y;
+    }
+
+    .notebook::after {
+        height: calc(215 * var(--m));
+    }
+
+    .notebook-lines {
+        left: calc(35 * var(--m));
+        right: calc(68 * var(--m));
+        background: repeating-linear-gradient(to bottom, transparent 0 calc(28.5 * var(--m)), #dce8f8 calc(28.5 * var(--m)) calc(30 * var(--m)));
+        background-position: 0 calc(18 * var(--m));
+    }
+
+    .feed-posts {
+        left: calc(51 * var(--m));
+        top: calc(27 * var(--m));
+        width: calc(290 * var(--m));
+    }
+
+    .post {
+        margin-bottom: calc(28 * var(--m));
+    }
+
+    .post-head {
+        gap: calc(6 * var(--m));
+    }
+
+    .post-avatar {
+        width: calc(36 * var(--m));
+        height: calc(36 * var(--m));
+    }
+
+    .post-name {
+        font-size: calc(16 * var(--m));
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .post-date {
+        display: inline;
+        margin-left: calc(4 * var(--m));
+        font-size: calc(14 * var(--m));
+        font-weight: 400;
+        color: var(--ink);
+    }
+
+    .post-date-d {
+        display: none;
+    }
+
+    .post-cat {
+        font-size: calc(17 * var(--m));
+        line-height: 1.2;
+    }
+
+    .post-text {
+        margin-top: calc(17 * var(--m));
+        padding-left: 0;
+        font-size: calc(13 * var(--m));
+        line-height: 1.3;
+    }
+
+    .post-img {
+        width: calc(207 * var(--m));
+        height: calc(138 * var(--m));
+        margin-top: calc(8 * var(--m));
+    }
+
+    .post-text+.post-img {
+        margin-top: calc(8 * var(--m));
+    }
+
+    /* แถบเลื่อนตกแต่งด้านขวา (ซ่อนผลงานฝั่งขวาของเดสก์ท็อป) */
+    .art-scroll {
+        left: calc(364 * var(--m));
+        top: calc(67 * var(--m));
+        width: calc(8 * var(--m));
+        height: calc(145 * var(--m));
+        overflow: hidden;
+        border-radius: 99px;
+        background: var(--sky);
+    }
+
+    .art-scroll>* {
+        display: none;
+    }
+
+    /* ---------- กล่องโพสต์ผลงาน ---------- */
+    .composer-title {
+        display: block;
+        position: absolute;
+        left: calc(62 * var(--m));
+        top: calc(595 * var(--m));
+        font-size: calc(15 * var(--m));
+        line-height: 1.2;
+        color: var(--ink);
+        z-index: 9;
+    }
+
+    .composer {
+        left: calc(16 * var(--m));
+        top: calc(619 * var(--m));
+        width: calc(356 * var(--m));
+        height: calc(363 * var(--m));
+        padding: calc(13 * var(--m)) calc(24 * var(--m)) 0 calc(23 * var(--m));
+        background: rgba(255, 224, 224, .9);
+        z-index: 9;
+    }
+
+    .pin {
+        left: calc(-12 * var(--m));
+        top: calc(-19 * var(--m));
+        width: calc(24 * var(--m));
+        height: calc(24 * var(--m));
+    }
+
+    .composer-head {
+        gap: calc(15 * var(--m));
+        padding-left: calc(11 * var(--m));
+    }
+
+    .composer-avatar {
+        width: calc(42 * var(--m));
+        height: calc(42 * var(--m));
+        font-size: calc(34 * var(--m));
+    }
+
+    .composer-name {
+        font-size: calc(18 * var(--m));
+    }
+
+    .composer-cat {
+        height: calc(21 * var(--m));
+        margin-top: calc(2 * var(--m));
+        padding: 0 calc(12 * var(--m));
+        background: #fff;
+        font-size: calc(12 * var(--m));
+    }
+
+    .composer-box {
+        height: calc(190 * var(--m));
+        margin-top: calc(50 * var(--m));
+    }
+
+    .composer-box::before {
+        left: calc(13 * var(--m));
+        top: calc(9 * var(--m));
+        width: calc(3 * var(--m));
+        height: calc(22 * var(--m));
+    }
+
+    .composer-box textarea {
+        height: calc(140 * var(--m));
+        padding: calc(10 * var(--m)) calc(12 * var(--m)) 0 calc(24 * var(--m));
+        font-size: calc(13 * var(--m));
+    }
+
+    .composer-tools {
+        left: calc(14 * var(--m));
+        right: calc(13 * var(--m));
+        bottom: calc(12 * var(--m));
+        gap: calc(20 * var(--m));
+        font-size: calc(22 * var(--m));
+    }
+
+    .btn-post {
+        right: calc(24 * var(--m));
+        bottom: calc(20 * var(--m));
+        gap: calc(5 * var(--m));
+        width: calc(100 * var(--m));
+        height: calc(27 * var(--m));
+        font-size: calc(14 * var(--m));
+    }
+}

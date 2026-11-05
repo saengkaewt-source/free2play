@@ -1,0 +1,963 @@
+/* =====================================================
+   Free2Pay – live.css (ตรงกับ profile___ไลฟ_.png)
+   ใช้ร่วมกับ style.css + search.css
+   หน่วย "Nd" = N px ของแบบ (แปลงเป็น calc(N * var(--d)) ให้แล้ว)
+   ===================================================== */
+
+/* ---------- ส่วนสีม่วงเข้ม: ปฏิทิน + ห้องไลฟ์ ---------- */
+.live-section.calendar-portfolio-section {
+    padding-bottom: calc(106 * var(--d));
+}
+
+.live-workspace {
+    display: flex;
+    gap: calc(13 * var(--d));
+    height: calc(580 * var(--d));
+    margin-top: calc(38 * var(--d));
+}
+
+/* ---------- วิดีโอไลฟ์ ---------- */
+.stream-card {
+    position: relative;
+    flex: 513 1 0;
+    min-width: 0;
+    overflow: hidden;
+    background: #222;
+    border-radius: calc(2 * var(--d));
+}
+
+.stream-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stream-head {
+    position: absolute;
+    top: calc(11 * var(--d));
+    left: calc(13 * var(--d));
+    right: calc(10 * var(--d));
+    height: calc(63 * var(--d));
+    display: flex;
+    align-items: center;
+    gap: calc(10 * var(--d));
+    padding: 0 calc(16 * var(--d)) 0 calc(14 * var(--d));
+    background: #fff;
+    border-radius: calc(3 * var(--d));
+}
+
+.stream-avatar {
+    width: calc(36 * var(--d));
+    height: calc(36 * var(--d));
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.stream-owner h3 {
+    font-size: calc(21 * var(--d));
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--orange);
+}
+
+.stream-owner p {
+    font-size: calc(15 * var(--d));
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--ink);
+}
+
+.stream-owner {
+    min-width: calc(95 * var(--d));
+}
+
+.stream-divider {
+    width: calc(2 * var(--d));
+    height: calc(44 * var(--d));
+    background: #d3d8fb;
+}
+
+.stream-desc {
+    flex: 1;
+    min-width: 0;
+    margin-left: calc(6 * var(--d));
+    font-size: calc(9.5 * var(--d));
+    line-height: 1.45;
+    color: var(--ink);
+}
+
+.btn-sound {
+    font-size: calc(26 * var(--d));
+    line-height: 1;
+    color: var(--violet);
+}
+
+.stream-live {
+    position: absolute;
+    top: calc(89 * var(--d));
+    right: calc(18 * var(--d));
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(6 * var(--d));
+    width: calc(66 * var(--d));
+    height: calc(22 * var(--d));
+    background: #fff;
+    border-radius: 99px;
+    color: var(--violet);
+    font-size: calc(12 * var(--d));
+    font-weight: 500;
+}
+
+.stream-live i {
+    font-size: calc(9 * var(--d));
+    color: var(--orange);
+}
+
+.stream-controls {
+    position: absolute;
+    left: calc(15 * var(--d));
+    right: calc(10 * var(--d));
+    bottom: calc(11 * var(--d));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.stream-actions {
+    display: flex;
+    gap: calc(7 * var(--d));
+}
+
+.circle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(47 * var(--d));
+    height: calc(47 * var(--d));
+    background: var(--violet);
+    color: #fff;
+    border-radius: 50%;
+    font-size: calc(22 * var(--d));
+}
+
+.reaction-bar {
+    display: flex;
+    align-items: center;
+    gap: calc(4 * var(--d));
+    height: calc(46 * var(--d));
+    padding: 0 calc(5 * var(--d));
+    background: var(--violet);
+    border-radius: 99px;
+}
+
+.reaction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(34 * var(--d));
+    height: calc(34 * var(--d));
+    border-radius: 50%;
+    color: #c9cffc;
+    font-size: calc(28 * var(--d));
+    line-height: 1;
+}
+
+.reaction.active {
+    width: calc(41 * var(--d));
+    height: calc(41 * var(--d));
+    background: var(--orange);
+    color: #fff;
+    font-size: calc(26 * var(--d));
+}
+
+/* ---------- แชต ---------- */
+.chat-panel {
+    flex: 251 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: calc(16 * var(--d)) calc(18 * var(--d)) calc(12 * var(--d));
+    background: #fff;
+    border-radius: calc(2 * var(--d));
+}
+
+.chat-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(8 * var(--d));
+    height: calc(44 * var(--d));
+}
+
+.chat-head .btn-more {
+    font-size: calc(18 * var(--d));
+    color: var(--violet);
+    padding: 0 calc(4 * var(--d));
+}
+
+.chat-head h3 {
+    margin-left: auto;
+    font-size: calc(23 * var(--d));
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.chat-user-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(43 * var(--d));
+    height: calc(43 * var(--d));
+    background: var(--orange);
+    border-radius: 50%;
+    color: #fff;
+    font-size: calc(32 * var(--d));
+}
+
+.chat-line {
+    height: calc(2 * var(--d));
+    margin-top: calc(8 * var(--d));
+    background: var(--plum);
+}
+
+.chat-list {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding-top: calc(2 * var(--d));
+}
+
+.chat-list::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-item {
+    display: flex;
+    align-items: flex-start;
+    gap: calc(6 * var(--d));
+    margin-top: calc(18 * var(--d));
+}
+
+.chat-item img {
+    width: calc(30 * var(--d));
+    height: calc(30 * var(--d));
+    flex: none;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.chat-item span {
+    display: block;
+    font-size: calc(10.5 * var(--d));
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--orange);
+}
+
+.chat-item p {
+    font-size: calc(8 * var(--d));
+    line-height: 1.35;
+    color: var(--ink);
+}
+
+.btn-gift {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(25 * var(--d));
+    height: calc(25 * var(--d));
+    margin-top: calc(10 * var(--d));
+    background: var(--violet);
+    color: #fff;
+    border-radius: 50%;
+    font-size: calc(11 * var(--d));
+}
+
+.chat-compose {
+    display: flex;
+    align-items: center;
+    gap: calc(12 * var(--d));
+    margin-top: calc(10 * var(--d));
+}
+
+.chat-compose input {
+    flex: 1;
+    min-width: 0;
+    height: calc(25 * var(--d));
+    padding: 0 calc(12 * var(--d));
+    background: var(--orange);
+    border-radius: 99px;
+    color: #fff;
+    font-size: calc(10 * var(--d));
+}
+
+.chat-compose input::placeholder {
+    color: #fff;
+}
+
+.chat-compose .btn-send {
+    font-size: calc(30 * var(--d));
+    line-height: 1;
+    color: var(--orange);
+}
+
+/* ---------- ส่วนสีฟ้า: ค้นหา + หมวดหมู่ + การ์ดไลฟ์ ---------- */
+.live-find {
+    padding: calc(56 * var(--d)) 0 calc(52 * var(--d));
+}
+
+/* ช่องค้นหาอยู่บนแท็บซ้าย */
+.live-find .search-pill-input {
+    left: calc(55 * var(--d));
+    right: auto;
+    top: calc(-34 * var(--d));
+    z-index: 3;
+}
+
+.live-find .live-tags {
+    width: calc(778 * var(--d));
+    margin: 0 auto;
+}
+
+.live-find .live-tags+.box-live {
+    margin-top: calc(52 * var(--d));
+}
+
+.live-find .box-live+.box-live {
+    margin-top: calc(58 * var(--d));
+}
+
+.live-find .btn-seemore-wrap {
+    margin-top: calc(40 * var(--d));
+}
+
+/* ---------- ไอคอนที่ Font Awesome ฟรีไม่มี/ฟอนต์ ---------- */
+.stream-live i,
+.badge-live i {
+    font-size: .7em;
+}
+
+/* ปุ่มเปิด Feedback (แสดงเฉพาะมือถือ) */
+.btn-feedback {
+    display: none;
+}
+
+/* =====================================================
+   MOBILE (≤ 560px) – อิงแบบ iPhone 14 Plus กว้าง 428px
+   1m = 1px ของแบบ
+   ===================================================== */
+@media (max-width: 560px) {
+    :root {
+        --m: calc(100vw / 428);
+    }
+
+    /* ---------- โปรไฟล์ ---------- */
+    .profile-top-section {
+        flex-direction: column;
+        gap: calc(10 * var(--m));
+        padding: calc(20 * var(--m)) calc(20 * var(--m)) calc(10 * var(--m));
+    }
+
+    .profile-card-main,
+    .profile-feedback-box {
+        flex: none;
+        width: 100%;
+        border-radius: calc(3 * var(--m));
+    }
+
+    .profile-card-main {
+        height: calc(192 * var(--m));
+    }
+
+    .btn-settings {
+        top: calc(6 * var(--m));
+        right: calc(9 * var(--m));
+        font-size: calc(17 * var(--m));
+    }
+
+    .btn-feedback {
+        display: block;
+        position: absolute;
+        top: calc(6 * var(--m));
+        right: calc(36 * var(--m));
+        font-size: calc(17 * var(--m));
+        line-height: 1;
+        color: var(--violet);
+    }
+
+    .profile-avatar-wrap {
+        left: calc(24 * var(--m));
+        top: calc(24 * var(--m));
+        width: calc(104 * var(--m));
+        height: calc(134 * var(--m));
+    }
+
+    .profile-avatar-img {
+        border-width: calc(5 * var(--m));
+    }
+
+    .profile-username {
+        left: calc(140 * var(--m));
+        top: calc(28 * var(--m));
+        font-size: calc(17 * var(--m));
+    }
+
+    .profile-category {
+        left: calc(140 * var(--m));
+        top: calc(48 * var(--m));
+        font-size: calc(12 * var(--m));
+    }
+
+    .profile-followers {
+        left: calc(140 * var(--m));
+        top: calc(68 * var(--m));
+    }
+
+    .profile-followers strong,
+    .profile-followers span {
+        display: block;
+        font-size: calc(12 * var(--m));
+        font-weight: 400;
+        line-height: 1.25;
+    }
+
+    .palettes-rating {
+        left: calc(212 * var(--m));
+        top: calc(70 * var(--m));
+        gap: calc(2 * var(--m));
+        font-size: calc(16 * var(--m));
+    }
+
+    .profile-bio {
+        left: calc(142 * var(--m));
+        top: calc(102 * var(--m));
+        width: calc(232 * var(--m));
+        font-size: calc(10.5 * var(--m));
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+    }
+
+    .profile-actions {
+        left: calc(144 * var(--m));
+        top: calc(152 * var(--m));
+        gap: calc(10 * var(--m));
+    }
+
+    .badge-live {
+        width: calc(52 * var(--m));
+        height: calc(16 * var(--m));
+        gap: calc(3 * var(--m));
+        font-size: calc(10 * var(--m));
+    }
+
+    .btn-icon-action {
+        font-size: calc(12 * var(--m));
+    }
+
+    .profile-socials {
+        right: calc(8 * var(--m));
+        bottom: calc(8 * var(--m));
+        gap: calc(4 * var(--m));
+        font-size: calc(13 * var(--m));
+    }
+
+    /* Feedback: ซ่อนไว้ กดไอคอนข้อความที่การ์ดเพื่อเปิด */
+    .profile-feedback-box {
+        display: none;
+        height: auto;
+        padding: calc(12 * var(--m)) calc(14 * var(--m));
+    }
+
+    .profile-top-section.show-feedback .profile-feedback-box {
+        display: flex;
+    }
+
+    .profile-feedback-box .feedback-header {
+        height: calc(22 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-title {
+        font-size: calc(16 * var(--m));
+    }
+
+    .profile-feedback-box .btn-more {
+        font-size: calc(15 * var(--m));
+    }
+
+    .profile-feedback-box .line {
+        height: calc(2 * var(--m));
+        margin-top: calc(5 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-list {
+        flex: none;
+        max-height: calc(200 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-item {
+        margin-top: calc(10 * var(--m));
+        gap: calc(6 * var(--m));
+    }
+
+    .profile-feedback-box .user-avatar {
+        width: calc(30 * var(--m));
+        height: calc(30 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-user {
+        font-size: calc(11 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-text {
+        font-size: calc(10 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-input-bar {
+        margin-top: calc(10 * var(--m));
+        gap: calc(8 * var(--m));
+    }
+
+    .profile-feedback-box .my-profile,
+    .profile-feedback-box .btn-send {
+        font-size: calc(22 * var(--m));
+    }
+
+    .profile-feedback-box .comment input {
+        height: calc(18 * var(--m));
+        font-size: calc(10 * var(--m));
+        padding: 0 calc(8 * var(--m));
+    }
+
+    /* ---------- ปฏิทิน ---------- */
+    .live-section.calendar-portfolio-section {
+        padding-inline: calc(20 * var(--m));
+        padding-bottom: calc(57 * var(--m));
+    }
+
+    .calendar-bar {
+        height: calc(30 * var(--m));
+        padding: 0 calc(12 * var(--m)) 0 calc(10 * var(--m));
+        border-radius: calc(2 * var(--m));
+    }
+
+    .calendar-bar-left {
+        gap: calc(6 * var(--m));
+        font-size: calc(12 * var(--m));
+    }
+
+    .calendar-bar-left i {
+        font-size: calc(17 * var(--m));
+    }
+
+    .calendar-bar-right {
+        gap: calc(12 * var(--m));
+    }
+
+    .calendar-bar-right button {
+        font-size: calc(15 * var(--m));
+    }
+
+    .calendar-bar-right .icon-tri::before {
+        font-size: calc(20 * var(--m));
+    }
+
+    /* ---------- ห้องไลฟ์ + แชต: รวมเป็นแผ่นขาวแผ่นเดียว ---------- */
+    .live-workspace {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: flex-start;
+        gap: 0;
+        height: auto;
+        margin-top: calc(38 * var(--m));
+        padding-bottom: calc(25 * var(--m));
+        background: #fff;
+    }
+
+    .stream-card,
+    .stream-controls,
+    .chat-panel {
+        display: contents;
+    }
+
+    .chat-head,
+    .chat-line {
+        display: none;
+    }
+
+    .stream-head {
+        order: 1;
+        position: static;
+        width: 100%;
+        height: calc(49 * var(--m));
+        gap: calc(8 * var(--m));
+        padding: 0 calc(12 * var(--m)) 0 calc(13 * var(--m));
+        border-radius: 0;
+    }
+
+    .stream-avatar {
+        width: calc(28 * var(--m));
+        height: calc(28 * var(--m));
+    }
+
+    .stream-owner {
+        min-width: calc(70 * var(--m));
+    }
+
+    .stream-owner h3 {
+        font-size: calc(16 * var(--m));
+    }
+
+    .stream-owner p {
+        font-size: calc(13 * var(--m));
+    }
+
+    .stream-divider {
+        height: calc(30 * var(--m));
+        width: calc(1.5 * var(--m));
+    }
+
+    .stream-desc {
+        margin-left: 0;
+        font-size: calc(9 * var(--m));
+        line-height: 1.3;
+    }
+
+    .btn-sound {
+        font-size: calc(20 * var(--m));
+    }
+
+    .stream-video {
+        order: 2;
+        width: 100%;
+        height: calc(340 * var(--m));
+    }
+
+    .stream-live {
+        top: calc(61 * var(--m));
+        right: calc(6 * var(--m));
+        width: calc(52 * var(--m));
+        height: calc(15 * var(--m));
+        gap: calc(3 * var(--m));
+        font-size: calc(9 * var(--m));
+    }
+
+    .chat-list {
+        order: 3;
+        flex: none;
+        width: 100%;
+        height: calc(284 * var(--m));
+        padding: calc(14 * var(--m)) calc(29 * var(--m)) 0;
+    }
+
+    .chat-item {
+        gap: calc(8 * var(--m));
+        margin-top: calc(12 * var(--m));
+    }
+
+    .chat-item:first-child {
+        margin-top: calc(8 * var(--m));
+    }
+
+    .chat-item img {
+        width: calc(44 * var(--m));
+        height: calc(44 * var(--m));
+    }
+
+    .chat-item span {
+        font-size: calc(16 * var(--m));
+    }
+
+    .chat-item p {
+        font-size: calc(12 * var(--m));
+        line-height: 1.4;
+    }
+
+    .stream-actions {
+        order: 4;
+        width: 100%;
+        gap: calc(28 * var(--m));
+        padding-left: calc(30 * var(--m));
+    }
+
+    .circle-btn {
+        width: calc(35 * var(--m));
+        height: calc(35 * var(--m));
+        font-size: calc(15 * var(--m));
+    }
+
+    .btn-gift {
+        order: 5;
+        width: calc(41 * var(--m));
+        height: calc(41 * var(--m));
+        margin: calc(12 * var(--m)) 0 0 calc(28 * var(--m));
+        font-size: calc(20 * var(--m));
+    }
+
+    .reaction-bar {
+        order: 6;
+        height: calc(34 * var(--m));
+        gap: calc(4 * var(--m));
+        margin: calc(12 * var(--m)) 0 0 calc(24 * var(--m));
+        padding: 0 calc(4 * var(--m));
+    }
+
+    .reaction {
+        width: calc(26 * var(--m));
+        height: calc(26 * var(--m));
+        font-size: calc(22 * var(--m));
+    }
+
+    .reaction.active {
+        width: calc(31 * var(--m));
+        height: calc(31 * var(--m));
+        font-size: calc(20 * var(--m));
+    }
+
+    .chat-compose {
+        order: 7;
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+        margin-top: calc(12 * var(--m));
+        padding: 0 calc(40 * var(--m)) 0 calc(28 * var(--m));
+    }
+
+    .chat-compose input {
+        flex: none;
+        width: calc(256 * var(--m));
+        height: calc(40 * var(--m));
+        padding: 0 calc(18 * var(--m));
+        font-size: calc(14 * var(--m));
+    }
+
+    .chat-compose .btn-send {
+        font-size: calc(46 * var(--m));
+    }
+
+    /* ---------- ส่วนสีฟ้า ---------- */
+    .live-find {
+        padding: calc(38 * var(--m)) 0 calc(41 * var(--m));
+    }
+
+    .live-find::before {
+        width: calc(146 * var(--m));
+        height: calc(32 * var(--m));
+        top: calc(-32 * var(--m));
+    }
+
+    .live-find .search-pill-input {
+        left: calc(11 * var(--m));
+        right: auto;
+        top: calc(-26 * var(--m));
+        width: calc(126 * var(--m));
+        height: calc(18 * var(--m));
+        padding: 0 calc(8 * var(--m));
+        border-width: 1px;
+        font-size: calc(10 * var(--m));
+    }
+
+    .live-find .search-pill-input input {
+        font-size: calc(10 * var(--m));
+    }
+
+    .live-find .live-tags {
+        width: calc(388 * var(--m));
+        grid-template-columns: repeat(4, 1fr);
+        gap: calc(13 * var(--m)) calc(9 * var(--m));
+        justify-content: stretch;
+    }
+
+    .live-find .live-tags .tag-pill {
+        height: calc(26 * var(--m));
+        font-size: calc(10 * var(--m));
+        white-space: nowrap;
+        border: 1px solid var(--plum);
+        box-shadow: 0 2px 3px rgba(0, 0, 0, .2);
+    }
+
+    .live-find .live-tags .tag-pill:nth-child(5) {
+        grid-column: 1 / span 2;
+        justify-self: end;
+        width: calc(141 * var(--m));
+    }
+
+    .live-find .live-tags .tag-pill:nth-child(6) {
+        grid-column: 3 / span 2;
+        justify-self: start;
+        width: calc(141 * var(--m));
+    }
+
+    .live-find .live-tags+.box-live {
+        margin-top: calc(33 * var(--m));
+    }
+
+    .live-find .box-live {
+        width: calc(388 * var(--m));
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(20 * var(--m));
+    }
+
+    .live-find .box-live+.box-live {
+        margin-top: calc(23 * var(--m));
+    }
+
+    .live-find .video-livebox {
+        height: calc(293 * var(--m));
+        border-radius: calc(8 * var(--m));
+    }
+
+    .live-find .but-liveplay {
+        top: calc(10 * var(--m));
+        right: calc(6 * var(--m));
+        gap: calc(3 * var(--m));
+        padding: calc(2 * var(--m)) calc(8 * var(--m)) calc(2 * var(--m)) calc(6 * var(--m));
+    }
+
+    .live-find .play {
+        width: calc(7 * var(--m));
+        height: calc(7 * var(--m));
+    }
+
+    .live-find .text-live {
+        font-size: calc(10 * var(--m));
+    }
+
+    .live-find .profile-bar {
+        left: calc(9 * var(--m));
+        bottom: calc(30 * var(--m));
+    }
+
+    .live-find .profile-img {
+        width: calc(57 * var(--m));
+        height: calc(57 * var(--m));
+    }
+
+    .live-find .profile-img>img {
+        border-width: calc(3 * var(--m));
+    }
+
+    .live-find .profile-img .status-on {
+        width: calc(14 * var(--m));
+        height: calc(14 * var(--m));
+        border-width: 2px;
+    }
+
+    .live-find .username-box {
+        height: calc(55 * var(--m));
+        padding: 0 calc(8 * var(--m)) 0 calc(73 * var(--m));
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .live-find .title-username {
+        font-size: calc(18 * var(--m));
+        font-weight: 600;
+        line-height: 1.15;
+    }
+
+    .live-find .category-user {
+        font-size: calc(14 * var(--m));
+        line-height: 1.15;
+    }
+
+    .live-find .btn-seemore-wrap {
+        margin-top: calc(23 * var(--m));
+    }
+
+    .live-find .btn-see-more-orange {
+        width: calc(159 * var(--m));
+        height: calc(26 * var(--m));
+        gap: calc(8 * var(--m));
+        border-radius: calc(8 * var(--m));
+        font-size: calc(12 * var(--m));
+    }
+
+    /* ---------- Footer ---------- */
+    .footer {
+        padding: calc(14 * var(--m)) calc(22 * var(--m)) calc(8 * var(--m));
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr auto auto;
+        gap: calc(10 * var(--m));
+    }
+
+    .footer-logo {
+        height: calc(12 * var(--m));
+        margin-top: calc(4 * var(--m));
+    }
+
+    .footer-nav {
+        gap: calc(16 * var(--m));
+    }
+
+    .footer-title {
+        font-size: calc(6 * var(--m));
+        margin-bottom: calc(2 * var(--m));
+    }
+
+    .footer-list li {
+        font-size: calc(5.5 * var(--m));
+        margin-bottom: calc(2 * var(--m));
+    }
+
+    .footer-apps {
+        gap: calc(10 * var(--m));
+        font-size: calc(22 * var(--m));
+    }
+
+    .footer-bottom {
+        margin-top: calc(8 * var(--m));
+        font-size: calc(4.5 * var(--m));
+    }
+}
+
+/* ========== Hover Video Preview ========== */
+
+/* wrapper ครอบ img + video ให้ทับกัน */
+.video-livebox .video-thumb-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+/* ภาพปกคลิป */
+.video-livebox .video-thumb-wrap .thumb-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    transition: opacity 0.25s ease;
+}
+
+/* video preview ซ่อนอยู่ทับบน img */
+.video-livebox .video-thumb-wrap .thumb-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+/* เมื่อ hover: ซ่อน img, แสดง video */
+.video-livebox:hover .video-thumb-wrap .thumb-img {
+    opacity: 0;
+}
+
+.video-livebox:hover .video-thumb-wrap .thumb-video {
+    opacity: 1;
+}

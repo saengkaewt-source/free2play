@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon+webname -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <title>Free2Pay</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- เมนู -->
+    <nav class="menu">
+        <button class="menu-toggle" aria-label="เมนู"
+            aria-expanded="false"><span></span><span></span><span></span></button>
+        <a href="../page/index.html">
+            <img src="../images/logo_white.png" alt="Free2Pay" class="logo_home">
+        </a>
+        <div class="menubar">
+            <div class="menu-links">
+                <a href="../page/index.html" class="active" aria-current="page">Home</a>
+                <a href="../page/search.html">Search</a>
+                <a href="../page/live.html">Live</a>
+                <div class="login">
+                    <a href="../page/login.html">Log in</a>
+                </div>
+            </div>
+            <div class="profile">
+                <a href="../page/profile.html"><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ฮีโร่ -->
+    <header class="hero-bar">
+        <div class="logo-img">
+            <img src="../images/logoinpage.png" alt="">
+        </div>
+        <div class="text-promot">
+            <div class="first">พื้นที่ของคน</div>
+            <div class="center">"free"</div>
+            <div class="last">แลนซ์</div>
+        </div>
+        <div class="button-home">
+            <a href="../page/search.html">เริ่มดูผลงาน</a>
+        </div>
+        <!-- ลำดับตามแบบ: ป้าย, หมา, ห่าน -->
+        <div class="img-promot">
+            <img src="../images/promot-3.png" alt="">
+            <img src="../images/promot-1.png" alt="">
+            <img src="../images/promot-2.png" alt="">
+        </div>
+    </header>
+
+    <!-- แท็บของโฟลเดอร์สีน้ำเงินมืด + ปุ่ม see all -->
+    <div class="haed-file-darkblue">
+        <div class="see-button">
+            <a href="../page/search.html">SEE ALL</a>
+        </div>
+    </div>
+
+    <div class="file-darkblue">
+
+        <!-- กล่องกดหมวดผู้เข้ามาชมเว็บ -->
+        <div class="category-button">
+            <div class="boxdesign-1">
+                <img src="../images/boxdesign-1.png" alt="">
+                <div class="title">ผู้ว่าจ้าง</div>
+                <div class="detail">เจ้าของธุรกิจ<br>ผู้สนับสนุนศิลปิน</div>
+            </div>
+            <div class="boxdesign-1">
+                <img src="../images/boxdesign-1.png" alt="">
+                <div class="title">ศิลปิน</div>
+                <div class="detail">นักวาด, นักออกแบบ,<br>สายผลิต</div>
+            </div>
+            <div class="boxdesign-1">
+                <img src="../images/boxdesign-1.png" alt="">
+                <div class="title">แฟนคลับ</div>
+                <div class="detail">ผู้คนที่สนใจ<br>ในงานของศิลปิน</div>
+            </div>
+        </div>
+
+        <!-- โฟลเดอร์ประเภทงาน -->
+        <div class="folder-box">
+            <div class="bottomlayer-folder">
+                <div class="artwork">
+                    <img src="https://plus.unsplash.com/premium_vector-1732113648103-77f71e0f1078?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-left">
+                    <img src="https://plus.unsplash.com/premium_vector-1710414670078-36f35f555909?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-center">
+                    <img src="https://plus.unsplash.com/premium_vector-1757476360492-01e7146be84e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-right">
+                </div>
+                <div class="toplayer-folder">
+                    <div class="text-folder">Digital Art</div>
+                </div>
+            </div>
+            <div class="bottomlayer-folder">
+                <div class="artwork">
+                    <img src="https://plus.unsplash.com/premium_photo-1722209813944-a4ee13b7bfd8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-left">
+                    <img src="https://plus.unsplash.com/premium_photo-1722209813945-8c9221fd0996?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-center">
+                    <img src="https://plus.unsplash.com/premium_photo-1721220445167-fe9081274fb0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-right">
+                </div>
+                <div class="toplayer-folder">
+                    <div class="text-folder">UXUI Designer</div>
+                </div>
+            </div>
+            <div class="bottomlayer-folder">
+                <div class="artwork">
+                    <img src="https://plus.unsplash.com/premium_photo-1679868096292-54efdc6c021f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-left">
+                    <img src="https://images.unsplash.com/photo-1631125915902-d8abe9225ff2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-center">
+                    <img src="https://images.unsplash.com/photo-1780736309258-2587e2821123?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-right">
+                </div>
+                <div class="toplayer-folder">
+                    <div class="text-folder">Handmade</div>
+                </div>
+            </div>
+            <div class="bottomlayer-folder">
+                <div class="artwork">
+                    <img src="https://plus.unsplash.com/premium_photo-1678481978242-37f6c0cea843?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-left">
+                    <img src="https://images.unsplash.com/photo-1771499194178-29bcce5ae016?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-center">
+                    <img src="https://plus.unsplash.com/premium_photo-1677829177875-6d44c4c3ce19?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="folder-right">
+                </div>
+                <div class="toplayer-folder">
+                    <div class="text-folder">Traditional Art</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ไลฟ์ -->
+        <div class="box-live">
+            <div class="video-livebox">
+                <div class="but-liveplay">
+                    <div class="play"></div>
+                    <div class="text-live">LIVE</div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1744686909443-eb72a54de998?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="video">
+                <div class="profile-bar">
+                    <div class="profile-img">
+                        <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="status-on"></div>
+                    </div>
+                </div>
+                <div class="username-box">
+                    <div class="title-username">Evelyn</div>
+                    <div class="category-user">Digital Art</div>
+                </div>
+            </div>
+            <div class="video-livebox">
+                <div class="but-liveplay">
+                    <div class="play"></div>
+                    <div class="text-live">LIVE</div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1648312182804-346237fbc0ea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="video">
+                <div class="profile-bar">
+                    <div class="profile-img">
+                        <img src="https://plus.unsplash.com/premium_vector-1719858610210-ba3445e84822?w=300&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="status-on"></div>
+                    </div>
+                </div>
+                <div class="username-box">
+                    <div class="title-username">Lee</div>
+                    <div class="category-user">UXUI Designer</div>
+                </div>
+            </div>
+            <div class="video-livebox">
+                <div class="but-liveplay">
+                    <div class="play"></div>
+                    <div class="text-live">LIVE</div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1780736309282-7af387641534?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="video">
+                <div class="profile-bar">
+                    <div class="profile-img">
+                        <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="status-on"></div>
+                    </div>
+                </div>
+                <div class="username-box">
+                    <div class="title-username">Mark</div>
+                    <div class="category-user">Handmade</div>
+                </div>
+            </div>
+            <div class="video-livebox">
+                <div class="but-liveplay">
+                    <div class="play"></div>
+                    <div class="text-live">LIVE</div>
+                </div>
+                <img src="https://plus.unsplash.com/premium_photo-1679811672048-9d4b810a7588?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="video">
+                <div class="profile-bar">
+                    <div class="profile-img">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60"
+                            alt="First">
+                        <div class="status-on"></div>
+                    </div>
+                </div>
+                <div class="username-box">
+                    <div class="title-username">First</div>
+                    <div class="category-user">Traditional Art</div>
+                </div>
+            </div>
+
+            <!-- วงกลมไปหน้า Live -->
+            <a href="../page/live.html" class="live-circle" title="ดูไลฟ์ทั้งหมด">
+                <img src="https://scontent-bkk1-2.cdninstagram.com/v/t51.82787-19/587623950_18121647724535474_4561500412363882369_n.jpg?_nc_cat=107&ig_cache_key=GA5uBiOynl3nimFAAIE-vwl1tE0-bmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=AkH8F7Z1qrAQ7kNvwEpXcQX&_nc_oc=AdrXPxxRlP6kgcQ-6U1NUYLHuDvqqBz2s7X9SCip2ym4QjEUYayQNRMcZkh5pmNv8H8&_nc_zt=24&_nc_ht=scontent-bkk1-2.cdninstagram.com&_nc_gid=FTSDUXnGrujBvpRXJhyRGA&_nc_ss=7a6a8&oh=00_AQR739LDVfrSMfxRnPGQp_uZXDQSk8Ql9ayR_ceXsbznjg&oe=6AEE8E19"
+                    alt="mee_na_desu">
+            </a>
+        </div>
+
+        <!-- คลิปหนีบ (อยู่นอกกล่องสมุด) -->
+        <img src="../images/clip.png" alt="" class="cilp-peper">
+
+        <!-- สมุดโพสต์ -->
+        <div class="box-big-note">
+
+            <div class="box-left">
+                <div class="box-post">
+                    <div class="user-profile-post">
+                        <img src="https://plus.unsplash.com/premium_photo-1688350808212-4e6908a03925?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="user-name-post">Merta</div>
+                        <div class="category-post">handmade</div>
+                    </div>
+                    <div class="detail-post"><span class="post-text">ต่างหูหนังแท้สินค้า otop</span><span
+                            class="post-date">12/10 1 วันที่ผ่านมา</span></div>
+                    <img src="https://images.unsplash.com/photo-1573227890085-12ab5d68a170?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="img-post">
+                </div>
+                <div class="box-post">
+                    <div class="user-profile-post">
+                        <img src="https://plus.unsplash.com/premium_photo-1739786995646-480d5cfd83dc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="user-name-post">คิม</div>
+                        <div class="category-post">handmade</div>
+                    </div>
+                    <div class="detail-post"><span class="post-text">My New Artwork is update</span><span
+                            class="post-date">12/10 1 วันที่ผ่านมา</span></div>
+                    <img src="https://plus.unsplash.com/premium_photo-1677621683737-3e92745fc7a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="img-post">
+                </div>
+                <div class="box-post">
+                    <div class="user-profile-post">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="user-name-post">มาย</div>
+                        <div class="category-post">UXUI Designer</div>
+                    </div>
+                    <div class="detail-post"><span class="post-text">ลงงานใหม่อีกครั้งครับ</span><span
+                            class="post-date">12/10 1 วันที่ผ่านมา</span></div>
+                    <img src="https://plus.unsplash.com/premium_photo-1661589354357-f56ddf86a0b4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="img-post">
+                </div>
+            </div>
+
+            <div class="box-right">
+
+                <div class="create-post-note">
+                    <img src="../images/หมุด.png" alt="หมุด" class="pin-deco">
+
+                    <div class="note-header">
+                        <div class="user-icon"><i class="fa-regular fa-circle-user"></i></div>
+                        <div class="user-info">
+                            <div class="user-name-boxpost">USER NAME</div>
+                            <div class="category-pill">
+                                <a href="#">category <i class="fa-solid fa-caret-down"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-input-box">
+                        <textarea placeholder="เริ่มต้นผลงานของคุณ" rows="4"></textarea>
+                        <div class="input-toolbar">
+                            <div class="tool-left">
+                                <button type="button" class="tool-btn"><i class="fa-regular fa-image"></i></button>
+                                <button type="button" class="tool-btn"><i class="fa-solid fa-camera"></i></button>
+                            </div>
+                            <div class="tool-right">
+                                <button type="button" class="tool-btn add-btn"><i
+                                        class="fa-regular fa-square-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-footer">
+                        <button type="submit" class="btn-post">โพสต์ <i class="fa-solid fa-pen-to-square"></i></button>
+                    </div>
+                </div>
+
+                <!-- รูปที่ user แปะเข้ามา (เปลี่ยนนามสกุลไฟล์ให้ตรงกับของจริง) -->
+                <div class="img-artworkpost">
+                    <img src="../images/image 32.png" alt="" class="postart">
+                    <img src="../images/image 33.png" alt="" class="postart">
+                    <img src="../images/image 34.png" alt="" class="postart">
+                    <div class="box-slide">
+                        <div class="button-slide"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="gradient-box"></div>
+
+        <div class="box-button-seemore">
+            <img src="../images/logoinpage.png" alt="" class="sticker-note">
+            <div class="but-seemore">
+                SEE MORE <i class="fa-solid fa-sort-down"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- แท็บของโฟลเดอร์ฟ้าอ่อน -->
+    <div class="haed-file-blue"></div>
+
+    <div class="file-blue">
+        <div class="box-highlight-artist">
+
+            <!-- ศิลปินแนะนำ -->
+            <div class="highlight-left">
+                <div class="artist-header">
+                    <div class="artist-profile">
+                        <div class="avatar-wrap">
+                            <img src="https://scontent-bkk1-2.cdninstagram.com/v/t51.82787-19/587623950_18121647724535474_4561500412363882369_n.jpg?_nc_cat=107&ig_cache_key=GA5uBiOynl3nimFAAIE-vwl1tE0-bmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=AkH8F7Z1qrAQ7kNvwEpXcQX&_nc_oc=AdrXPxxRlP6kgcQ-6U1NUYLHuDvqqBz2s7X9SCip2ym4QjEUYayQNRMcZkh5pmNv8H8&_nc_zt=24&_nc_ht=scontent-bkk1-2.cdninstagram.com&_nc_gid=FTSDUXnGrujBvpRXJhyRGA&_nc_ss=7a6a8&oh=00_AQR739LDVfrSMfxRnPGQp_uZXDQSk8Ql9ayR_ceXsbznjg&oe=6AEE8E19"
+                                alt="" class="artist-avatar">
+                            <div class="status-on"></div>
+                        </div>
+                        <div class="artist-info">
+                            <div class="artist-name">mee_na_desu</div>
+                            <div class="artist-category">Digital Art</div>
+                        </div>
+                    </div>
+                    <div class="palettes-vote">
+                        <i class="fa-solid fa-palette"></i>
+                        <i class="fa-solid fa-palette"></i>
+                        <i class="fa-solid fa-palette"></i>
+                        <i class="fa-solid fa-palette"></i>
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                </div>
+
+                <div class="art-gallery">
+                    <img src="../images/hl1.JPG" alt="Artwork 1" class="gallery-item">
+                    <img src="../images/hl2.JPG" alt="Artwork 2" class="gallery-item">
+                    <img src="../images/hl3.JPG" alt="Artwork 3" class="gallery-item">
+                </div>
+
+                <div class="scrollbar">
+                    <div class="button-scrollbar"></div>
+                </div>
+            </div>
+
+            <!-- Feedback -->
+            <div class="highlight-right">
+                <div class="feedback-header">
+                    <h3 class="feedback-title">Feedback</h3>
+                    <div class="btn-more"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                </div>
+                <div class="line"></div>
+
+                <div class="feedback-list">
+                    <div class="feedback-item">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt=""
+                            class="user-avatar">
+                        <div class="feedback-content">
+                            <span class="feedback-user">Wafflesss</span>
+                            <p class="feedback-text">สวยมากๆ เลยครับ! ชอบการลงสีมาก</p>
+                        </div>
+                    </div>
+                    <div class="feedback-item">
+                        <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100" alt=""
+                            class="user-avatar">
+                        <div class="feedback-content">
+                            <span class="feedback-user">zub04uctka</span>
+                            <p class="feedback-text">งานดีมากเลย เส้นคมสวยสุดๆอนาคตไกลแน่นอน</p>
+                        </div>
+                    </div>
+                    <div class="feedback-item">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" alt=""
+                            class="user-avatar">
+                        <div class="feedback-content">
+                            <span class="feedback-user">aWful</span>
+                            <p class="feedback-text">ไว้จะกลับมาจ้างอีกนะค้าบ งานตึงๆโหดๆ</p>
+                        </div>
+                    </div>
+                    <div class="feedback-item">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt=""
+                            class="user-avatar">
+                        <div class="feedback-content">
+                            <span class="feedback-user">itssfine</span>
+                            <p class="feedback-text">ผลงานของคุณอร่อยมากๆ รับประกันจากคนเคยจ้างค่ะ
+                                คนวาดคุยน่ารักกันเองสุดๆ</p>
+                        </div>
+                    </div>
+                    <div class="feedback-item">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt=""
+                            class="user-avatar">
+                        <div class="feedback-content">
+                            <span class="feedback-user">stavn</span>
+                            <p class="feedback-text">งานดีตลอดคนนี้ ชอบมากครับ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedback-input-bar">
+                    <div class="my-profile"><i class="fa-regular fa-circle-user"></i></div>
+                    <div class="comment"><input type="text" placeholder="..."></div>
+                    <div class="btn-send"><i class="fa-regular fa-paper-plane"></i></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- โฟลเดอร์ศิลปิน (น้ำเงิน hover เป็นส้ม) -->
+    <div class="folder-box">
+
+        <div class="bottomlayer-folder">
+            <div class="artwork">
+                <img src="../images/hl1.JPG" alt="" class="folder-left">
+                <img src="../images/hl2.JPG" alt="" class="folder-center">
+                <img src="../images/hl3.JPG" alt="" class="folder-right">
+            </div>
+            <div class="toplayer-folder">
+                <div class="detailuser-folder">
+                    <img src="https://scontent-bkk1-2.cdninstagram.com/v/t51.82787-19/587623950_18121647724535474_4561500412363882369_n.jpg?_nc_cat=107&ig_cache_key=GA5uBiOynl3nimFAAIE-vwl1tE0-bmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=1v3na-lLYJQQ7kNvwF2a9Uy&_nc_oc=AdpmXjVtnU2kgmVG8lg9fqidGFjYnsC1Dc_Cx3s8W6lT6VxguAM5J12oWJRtxKW5LAw&_nc_zt=24&_nc_ht=scontent-bkk1-2.cdninstagram.com&_nc_gid=pznrF3LkU8wwB09FEWm9hg&_nc_ss=7aaaf&oh=00_AQRjcSFyUgUFBhdhUo8nJog7qBDJddHOYUM5Ss_ci9eQqA&oe=6AF28299"
+                        alt="" class="user-folder">
+                    <div class="name-folder">mee_na_desu</div>
+                    <div class="cat-folder">Digital Art</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomlayer-folder">
+            <div class="artwork">
+                <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-left">
+                <img src="https://images.unsplash.com/photo-1629752187687-3d3c7ea3a21b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-center">
+                <img src="https://images.unsplash.com/photo-1690369519543-c81a2121f740?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-right">
+            </div>
+            <div class="toplayer-folder">
+                <div class="detailuser-folder">
+                    <img src="https://plus.unsplash.com/premium_photo-1682125164600-e7493508e496?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="user-folder">
+                    <div class="name-folder">markker_lee</div>
+                    <div class="cat-folder">UXUI Desigener</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomlayer-folder">
+            <div class="artwork">
+                <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-left">
+                <img src="https://images.unsplash.com/photo-1765814142702-52474219184e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-center">
+                <img src="https://images.unsplash.com/photo-1770129703548-e1ced0e4f118?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-right">
+            </div>
+            <div class="toplayer-folder">
+                <div class="detailuser-folder">
+                    <img src="https://images.unsplash.com/photo-1633887091273-a3bd71efddde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="user-folder">
+                    <div class="name-folder">Malee</div>
+                    <div class="cat-folder">Traditional Art</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottomlayer-folder">
+            <div class="artwork">
+                <img src="https://images.unsplash.com/photo-1631125915902-d8abe9225ff2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-left">
+                <img src="https://images.unsplash.com/photo-1780736309258-2587e2821123?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-center">
+                <img src="https://plus.unsplash.com/premium_photo-1679868096292-54efdc6c021f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                    alt="" class="folder-right">
+            </div>
+            <div class="toplayer-folder">
+                <div class="detailuser-folder">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="" class="user-folder">
+                    <div class="name-folder">Nana_craft</div>
+                    <div class="cat-folder">Handmade</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="../images/logo_white.png" alt="Free2Pay" class="footer-logo">
+                </a>
+            </div>
+
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h4 class="footer-title">Home</h4>
+                    <ul class="footer-list">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="live.html">Live</a></li>
+                        <li><a href="search.html">Category</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><a href="#">popular</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Live</h4>
+                    <ul class="footer-list">
+                        <li><a href="live.html">Calender</a></li>
+                    </ul>
+                    <h4 class="footer-title search-title"><a href="search.html">Search</a></h4>
+                </div>
+            </div>
+
+            <div class="footer-apps">
+                <a href="#" class="app-icon" title="App Store"><i class="fa-brands fa-app-store-ios"></i></a>
+                <a href="#" class="app-icon" title="Google Play"><i class="fa-brands fa-google-play"></i></a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>COPYRIGHT2026 FREE2PAY.ONLINE THAILAND ,2026</p>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

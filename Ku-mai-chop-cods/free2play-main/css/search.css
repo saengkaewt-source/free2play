@@ -1,0 +1,1238 @@
+/* Free2Pay – profile.css (ตรงกับ profile.png) | ใช้ร่วมกับ style.css
+   หน่วย "Nd" = N px ของแบบกว้าง 888px (แปลงเป็น calc ให้แล้ว) */
+:root {
+    --d: calc(100vw / 888);
+}
+
+/* ---------- 1. การ์ดโปรไฟล์ + Feedback ---------- */
+.profile-top-section,
+.calendar-portfolio-section {
+    background: var(--plum);
+    padding-inline: calc(55 * var(--d));
+}
+
+.profile-top-section {
+    display: flex;
+    gap: calc(10 * var(--d));
+    padding-top: calc(30 * var(--d));
+    padding-bottom: calc(18 * var(--d));
+}
+
+.profile-card-main,
+.profile-feedback-box {
+    height: calc(238 * var(--d));
+    background: var(--cream);
+    border-radius: calc(3 * var(--d));
+    position: relative;
+}
+
+.profile-card-main {
+    flex: 498 1 0;
+    min-width: 0;
+}
+
+.profile-feedback-box {
+    flex: 270 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: calc(12 * var(--d)) calc(18 * var(--d)) calc(10 * var(--d));
+}
+
+.btn-settings {
+    position: absolute;
+    top: calc(12 * var(--d));
+    right: calc(11 * var(--d));
+    font-size: calc(24 * var(--d));
+    line-height: 1;
+    color: var(--violet);
+}
+
+.profile-avatar-wrap {
+    position: absolute;
+    left: calc(31 * var(--d));
+    top: calc(30 * var(--d));
+    width: calc(135 * var(--d));
+    height: calc(174 * var(--d));
+}
+
+.profile-avatar-wrap .status-on {
+    display: none;
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: calc(7 * var(--d)) solid var(--violet);
+}
+
+.profile-username {
+    position: absolute;
+    left: calc(180 * var(--d));
+    top: calc(34 * var(--d));
+    font-size: calc(22 * var(--d));
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--orange);
+}
+
+.profile-category {
+    position: absolute;
+    left: calc(180 * var(--d));
+    top: calc(63 * var(--d));
+    font-size: calc(14 * var(--d));
+    line-height: 1.2;
+}
+
+.profile-followers {
+    position: absolute;
+    left: calc(181 * var(--d));
+    top: calc(85 * var(--d));
+    line-height: 1.1;
+}
+
+.profile-followers strong {
+    display: block;
+    font-size: calc(13 * var(--d));
+    font-weight: 600;
+}
+
+.profile-followers span {
+    font-size: calc(8 * var(--d));
+}
+
+.palettes-rating {
+    position: absolute;
+    left: calc(273 * var(--d));
+    top: calc(88 * var(--d));
+    display: flex;
+    gap: calc(3 * var(--d));
+    font-size: calc(22 * var(--d));
+    line-height: 1;
+    color: #ee6a78;
+    margin: 0;
+}
+
+.palettes-rating i:last-child {
+    opacity: .3;
+}
+
+.profile-bio {
+    position: absolute;
+    left: calc(183 * var(--d));
+    top: calc(131 * var(--d));
+    width: calc(315 * var(--d));
+    font-size: calc(10.5 * var(--d));
+    line-height: 1.5;
+    margin: 0;
+}
+
+.profile-actions {
+    position: absolute;
+    left: calc(185 * var(--d));
+    top: calc(182 * var(--d));
+    display: flex;
+    align-items: center;
+    gap: calc(21 * var(--d));
+}
+
+.badge-live {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(6 * var(--d));
+    width: calc(67 * var(--d));
+    height: calc(24 * var(--d));
+    justify-content: center;
+    background: var(--violet);
+    color: #fff;
+    border-radius: 99px;
+    font-size: calc(12 * var(--d));
+    font-weight: 500;
+}
+
+.badge-live i {
+    font-size: calc(8 * var(--d));
+}
+
+.btn-icon-action {
+    font-size: calc(20 * var(--d));
+    line-height: 1;
+    color: var(--violet);
+}
+
+.profile-socials {
+    position: absolute;
+    right: calc(9 * var(--d));
+    bottom: calc(12 * var(--d));
+    display: flex;
+    gap: calc(11 * var(--d));
+    font-size: calc(21 * var(--d));
+    line-height: 1;
+    color: var(--violet);
+}
+
+.profile-feedback-box .feedback-header {
+    height: calc(22 * var(--d));
+}
+
+.profile-feedback-box .feedback-title {
+    font-size: calc(20 * var(--d));
+    line-height: 1.1;
+}
+
+.profile-feedback-box .btn-more {
+    font-size: calc(18 * var(--d));
+    padding: 0 calc(4 * var(--d));
+}
+
+.profile-feedback-box .line {
+    height: calc(2 * var(--d));
+    margin: calc(6 * var(--d)) 0 0;
+    background: #5f5a85;
+}
+
+.profile-feedback-box .feedback-list {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding-top: calc(1 * var(--d));
+}
+
+.profile-feedback-box .feedback-list::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-feedback-box .feedback-item {
+    padding: 0;
+    margin-top: calc(16 * var(--d));
+    gap: calc(5 * var(--d));
+    align-items: flex-start;
+}
+
+.profile-feedback-box .user-avatar {
+    width: calc(30 * var(--d));
+    height: calc(30 * var(--d));
+}
+
+.profile-feedback-box .feedback-user {
+    font-size: calc(11 * var(--d));
+    line-height: 1.2;
+}
+
+.profile-feedback-box .feedback-text {
+    font-size: calc(8 * var(--d));
+    line-height: 1.35;
+    color: var(--ink);
+}
+
+.profile-feedback-box .feedback-input-bar {
+    margin-top: calc(6 * var(--d));
+    gap: calc(8 * var(--d));
+}
+
+.profile-feedback-box .my-profile {
+    font-size: calc(20 * var(--d));
+}
+
+.profile-feedback-box .comment input {
+    height: calc(14 * var(--d));
+    font-size: calc(8 * var(--d));
+    padding: 0 calc(8 * var(--d));
+}
+
+.profile-feedback-box .btn-send {
+    font-size: calc(20 * var(--d));
+    line-height: 1;
+}
+
+/* ---------- 2. ปฏิทิน + ผลงาน ---------- */
+.calendar-portfolio-section {
+    padding-bottom: calc(74 * var(--d));
+}
+
+.calendar-bar {
+    height: calc(60 * var(--d));
+    background: var(--violet);
+    color: #fff;
+    border-radius: calc(3 * var(--d));
+    padding: 0 calc(28 * var(--d)) 0 calc(20 * var(--d));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.calendar-bar-left {
+    display: flex;
+    align-items: center;
+    gap: calc(14 * var(--d));
+    font-size: calc(20 * var(--d));
+    font-weight: 700;
+}
+
+.calendar-bar-left i {
+    font-size: calc(32 * var(--d));
+}
+
+.calendar-bar-right {
+    display: flex;
+    align-items: center;
+    gap: calc(30 * var(--d));
+    font-size: calc(22 * var(--d));
+    color: #fff;
+}
+
+.calendar-bar-right button {
+    color: #fff;
+    font-size: calc(24 * var(--d));
+    line-height: 1;
+}
+
+.icon-tri::before {
+    content: "\25BD";
+    font-style: normal;
+    font-family: var(--font);
+}
+
+.calendar-bar-right .icon-tri::before {
+    font-size: calc(34 * var(--d));
+}
+
+.portfolio-grid,
+.gallery-cards-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: calc(31 * var(--d)) calc(13 * var(--d));
+}
+
+.portfolio-grid {
+    margin-top: calc(39 * var(--d));
+}
+
+.portfolio-card,
+.gallery-card {
+    position: relative;
+    height: calc(342 * var(--d));
+    padding: calc(13 * var(--d)) calc(14 * var(--d));
+    background: var(--pink);
+}
+
+.portfolio-thumb,
+.gallery-thumb {
+    width: 100%;
+    height: calc(262 * var(--d));
+    object-fit: cover;
+}
+
+.portfolio-info,
+.gallery-info {
+    margin-top: calc(6 * var(--d));
+}
+
+.portfolio-name {
+    font-size: calc(20 * var(--d));
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--orange);
+}
+
+.portfolio-cat {
+    font-size: calc(9 * var(--d));
+    font-weight: 700;
+    line-height: 1.3;
+    color: #000;
+}
+
+.gallery-info .portfolio-cat {
+    font-weight: 400;
+}
+
+.btn-seemore-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: calc(36 * var(--d));
+}
+
+.btn-see-more-purple,
+.btn-see-more-orange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(8 * var(--d));
+    width: calc(250 * var(--d));
+    height: calc(40 * var(--d));
+    border-radius: calc(9 * var(--d));
+    color: #fff;
+    font-size: calc(20 * var(--d));
+    font-weight: 500;
+}
+
+.btn-see-more-purple {
+    background: var(--violet);
+}
+
+.btn-see-more-orange {
+    background: var(--orange);
+}
+
+/* ---------- 3. หมวดหมู่ + แกลเลอรี (แท็บแฟ้มสีม่วงน้ำเงิน) ---------- */
+.category-gallery-section {
+    position: relative;
+    background: var(--violet);
+    padding: calc(49 * var(--d)) calc(55 * var(--d)) calc(57 * var(--d));
+}
+
+.category-gallery-section::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: calc(-59 * var(--d));
+    width: calc(305 * var(--d));
+    height: calc(59 * var(--d));
+    background: var(--violet);
+    clip-path: polygon(0 100%, 6% 14%, 9% 0, 100% 0, 100% 100%);
+}
+
+.category-search-bar {
+    position: static;
+}
+
+.sticker-ee {
+    position: absolute;
+    left: calc(48 * var(--d));
+    top: calc(-100 * var(--d));
+    width: calc(133 * var(--d));
+    z-index: 3;
+}
+
+.sticker-ee img {
+    width: 100%;
+    height: auto;
+}
+
+.search-pill-input {
+    position: absolute;
+    right: calc(55 * var(--d));
+    top: calc(-36 * var(--d));
+    width: calc(204 * var(--d));
+    height: calc(32 * var(--d));
+    padding: 0 calc(14 * var(--d));
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: calc(1.5 * var(--d)) solid var(--plum);
+    border-radius: 99px;
+    font-size: calc(15 * var(--d));
+}
+
+.search-pill-input input {
+    width: 85%;
+    font-size: calc(13 * var(--d));
+    color: var(--ink);
+}
+
+.search-pill-input input::placeholder {
+    color: var(--ink);
+}
+
+.category-tags {
+    display: grid;
+    grid-template-columns: repeat(4, calc(138 * var(--d)));
+    gap: calc(20 * var(--d)) calc(43 * var(--d));
+    justify-content: center;
+}
+
+.tag-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(46 * var(--d));
+    background: #fff;
+    border-radius: 99px;
+    font-size: calc(16 * var(--d));
+    color: #333;
+    box-shadow: 0 calc(3 * var(--d)) calc(6 * var(--d)) rgba(0, 0, 0, .25);
+}
+
+.tag-pill:nth-child(5) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    width: calc(187 * var(--d));
+}
+
+.tag-pill:nth-child(6) {
+    grid-column: 3 / span 2;
+    justify-self: center;
+    width: calc(187 * var(--d));
+}
+
+.tag-pill:hover {
+    background: var(--pink);
+    color: var(--orange);
+}
+
+.gallery-cards-3 {
+    margin-top: calc(47 * var(--d));
+}
+
+.gallery-artist-avatar {
+    position: absolute;
+    right: calc(15 * var(--d));
+    bottom: calc(13 * var(--d));
+    width: calc(46 * var(--d));
+    height: calc(46 * var(--d));
+}
+
+.gallery-artist-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: calc(2 * var(--d)) solid #fff;
+}
+
+.gallery-artist-avatar::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: calc(12 * var(--d));
+    height: calc(12 * var(--d));
+    background: var(--orange);
+    border: calc(2 * var(--d)) solid #fff;
+    border-radius: 50%;
+}
+
+.category-gallery-section .btn-seemore-wrap {
+    margin-top: calc(34 * var(--d));
+}
+
+/* ---------- 4. ไลฟ์ (แท็บแฟ้มสีฟ้าอ่อน) ---------- */
+.recommended-artists-section {
+    position: relative;
+    background: var(--sky);
+    padding: calc(46 * var(--d)) 0 calc(48 * var(--d));
+}
+
+.recommended-artists-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(-60 * var(--d));
+    width: calc(308 * var(--d));
+    height: calc(60 * var(--d));
+    background: var(--sky);
+    clip-path: polygon(0 0, 94% 0, 100% 100%, 0 100%);
+}
+
+.recommended-artists-section .box-live {
+    width: calc(778 * var(--d));
+    margin: 0 auto;
+}
+
+/* ---------- HOVER ---------- */
+.btn-settings,
+.btn-icon-action,
+.profile-socials a,
+.badge-live,
+.palettes-rating i,
+.calendar-bar-right button,
+.calendar-bar-left,
+.btn-more,
+.btn-send,
+.my-profile,
+.portfolio-card,
+.gallery-card,
+.gallery-artist-avatar,
+.tag-pill,
+.search-pill-input,
+.btn-see-more-purple,
+.btn-see-more-orange,
+.sticker-ee,
+.video-livebox,
+.video-livebox .video,
+.profile-avatar-img {
+    transition: transform .2s, background .2s, color .2s, box-shadow .2s, filter .2s;
+}
+
+@media (hover: hover) {
+
+    /* 1. การ์ดโปรไฟล์ + Feedback */
+    .btn-settings:hover {
+        color: var(--orange);
+        transform: rotate(90deg);
+    }
+
+    .btn-icon-action:hover,
+    .profile-socials a:hover {
+        color: var(--orange);
+        transform: translateY(calc(-3 * var(--d)));
+    }
+
+    .badge-live:hover {
+        background: var(--orange);
+    }
+
+    .palettes-rating i:hover {
+        transform: scale(1.2) rotate(-8deg);
+    }
+
+    .profile-avatar-img:hover {
+        filter: brightness(1.06);
+        transform: scale(1.03);
+    }
+
+    .profile-feedback-box .btn-more:hover,
+    .profile-feedback-box .btn-send:hover {
+        color: var(--violet);
+        transform: scale(1.15);
+    }
+
+    .profile-feedback-box .feedback-item:hover .feedback-user {
+        text-decoration: underline;
+    }
+
+    .profile-feedback-box .user-avatar {
+        transition: transform .2s;
+    }
+
+    .profile-feedback-box .feedback-item:hover .user-avatar {
+        transform: scale(1.1);
+    }
+
+    /* 2. ปฏิทิน + ผลงาน */
+    .calendar-bar-right button:hover {
+        transform: scale(1.18);
+        color: var(--pink);
+    }
+
+    .calendar-bar-left:hover {
+        color: var(--pink);
+    }
+
+    .portfolio-card:hover,
+    .gallery-card:hover {
+        transform: translateY(calc(-6 * var(--d)));
+        box-shadow: 0 calc(10 * var(--d)) calc(18 * var(--d)) rgba(0, 0, 0, .3);
+    }
+
+    .portfolio-card:hover .portfolio-name,
+    .gallery-card:hover .portfolio-name {
+        color: var(--violet);
+    }
+
+    .btn-see-more-purple:hover {
+        background: var(--orange);
+        transform: translateY(calc(-3 * var(--d)));
+    }
+
+    .btn-see-more-orange:hover {
+        background: var(--plum);
+        transform: translateY(calc(-3 * var(--d)));
+    }
+
+    /* 3. หมวดหมู่ + แกลเลอรี */
+    .sticker-ee:hover {
+        transform: rotate(-8deg) scale(1.06);
+    }
+
+    .search-pill-input:hover,
+    .search-pill-input:focus-within {
+        box-shadow: 0 calc(3 * var(--d)) calc(8 * var(--d)) rgba(0, 0, 0, .3);
+    }
+
+    .tag-pill:hover {
+        transform: translateY(calc(-3 * var(--d)));
+    }
+
+    .gallery-artist-avatar:hover {
+        transform: scale(1.12);
+    }
+
+    /* 4. ไลฟ์ */
+    .video-livebox:hover {
+        transform: translateY(calc(-6 * var(--d)));
+        box-shadow: 0 calc(10 * var(--d)) calc(18 * var(--d)) rgba(0, 0, 0, .35);
+    }
+
+    .video-livebox:hover .video {
+        transform: scale(1.06);
+    }
+}
+
+/* ---------- ปฏิทิน (เปิดเมื่อกดแถบ "ปฏิทิน") ---------- */
+.calendar-bar {
+    cursor: pointer;
+    user-select: none;
+}
+
+.calendar-panel {
+    display: none;
+    background: var(--cream);
+    border-radius: 0 0 calc(20 * var(--d)) calc(20 * var(--d));
+    padding: 0 calc(35 * var(--d)) calc(68 * var(--d));
+}
+
+.calendar-portfolio-section.is-open .calendar-panel {
+    display: block;
+    animation: calIn .25s ease;
+}
+
+.calendar-portfolio-section.is-open .portfolio-grid,
+.calendar-portfolio-section.is-open .btn-seemore-wrap {
+    display: none;
+}
+
+.calendar-portfolio-section.is-open .calendar-bar {
+    border-radius: calc(3 * var(--d)) calc(3 * var(--d)) 0 0;
+}
+
+@keyframes calIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.cal-head {
+    height: calc(79 * var(--d));
+    padding: calc(9 * var(--d)) calc(15 * var(--d)) 0 calc(29 * var(--d));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cal-month {
+    display: flex;
+    align-items: center;
+    gap: calc(12 * var(--d));
+    font-size: calc(22 * var(--d));
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.cal-month .icon-tri::before {
+    font-size: calc(20 * var(--d));
+}
+
+.btn-hire {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(8 * var(--d));
+    height: calc(35 * var(--d));
+    padding: 0 calc(20 * var(--d));
+    background: var(--violet);
+    color: #fff;
+    border-radius: 99px;
+    font-size: calc(18 * var(--d));
+    font-weight: 600;
+    transition: background .2s, transform .2s;
+}
+
+.btn-hire i {
+    font-size: calc(18 * var(--d));
+}
+
+.cal-line {
+    height: calc(3 * var(--d));
+    background: var(--orange);
+}
+
+.cal-weekdays,
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, calc(87 * var(--d)));
+    justify-content: center;
+}
+
+.cal-weekdays {
+    margin-top: calc(15 * var(--d));
+    height: calc(60 * var(--d));
+    align-items: center;
+    background: var(--sky);
+    text-align: center;
+    font-size: calc(17 * var(--d));
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.cal-grid {
+    padding-top: calc(18 * var(--d));
+}
+
+.cal-day {
+    position: relative;
+    height: calc(78 * var(--d));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(19 * var(--d));
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.cal-day b {
+    position: relative;
+    z-index: 1;
+    width: calc(56 * var(--d));
+    height: calc(56 * var(--d));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: inherit;
+    transition: background .2s, color .2s;
+}
+
+.cal-day.out b {
+    background: var(--sky);
+    color: var(--violet);
+}
+
+.cal-day.range-start b,
+.cal-day.range-end b {
+    background: var(--orange);
+    color: #fff;
+}
+
+.cal-day.range-start::before,
+.cal-day.range-mid::before,
+.cal-day.range-end::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: calc(45 * var(--d));
+    margin-top: calc(-22.5 * var(--d));
+    background: #fbb9a8;
+}
+
+.cal-day.range-start::before {
+    left: 50%;
+    right: 0;
+}
+
+.cal-day.range-mid::before {
+    left: 0;
+    right: 0;
+}
+
+.cal-day.range-end::before {
+    left: 0;
+    right: 50%;
+}
+
+.cal-note {
+    width: calc(600 * var(--d));
+    margin: calc(15 * var(--d)) 0 0 calc(48 * var(--d));
+}
+
+.cal-note-tag {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    height: calc(35 * var(--d));
+    padding: 0 calc(22 * var(--d));
+    margin-bottom: calc(-18 * var(--d));
+    background: var(--orange);
+    color: #fff;
+    border-radius: 99px;
+    font-size: calc(19 * var(--d));
+    font-weight: 700;
+}
+
+.cal-note-box {
+    height: calc(85 * var(--d));
+    padding: 0 calc(22 * var(--d)) 0 calc(32 * var(--d));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fbb9a8;
+    color: var(--orange);
+    font-size: calc(19 * var(--d));
+    font-weight: 700;
+}
+
+.cal-note-box li {
+    list-style: disc inside;
+}
+
+.cal-note-box button {
+    color: var(--orange);
+    font-size: calc(30 * var(--d));
+    line-height: 1;
+    transition: transform .2s;
+}
+
+@media (hover: hover) {
+    .btn-hire:hover {
+        background: var(--orange);
+        transform: translateY(-2px);
+    }
+
+    .cal-day:not(.out):not(.range-start):not(.range-end):hover b {
+        background: var(--pink);
+    }
+
+    .cal-day.out:hover b {
+        background: var(--violet);
+        color: #fff;
+    }
+
+    .cal-note-box button:hover {
+        transform: scale(1.15) rotate(-6deg);
+    }
+}
+
+/* =====================================================
+   MOBILE – ผลงาน + หมวดหมู่ + แกลเลอรี (≤ 560px)
+   อิงแบบกว้าง 194px  →  1p = 1px ของแบบ
+   ===================================================== */
+.gallery-card-extra {
+    display: none;
+}
+
+@media (max-width: 560px) {
+    :root {
+        --p: calc(100vw / 194);
+    }
+
+    .gallery-card-extra {
+        display: block;
+    }
+
+    /* ---------- 2. ผลงาน 2 คอลัมน์ ---------- */
+    .calendar-portfolio-section {
+        padding-inline: calc(12 * var(--p));
+        padding-bottom: calc(34 * var(--p));
+    }
+
+    .portfolio-grid,
+    .gallery-cards-3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(8 * var(--p)) calc(10 * var(--p));
+    }
+
+    .portfolio-grid {
+        margin-top: calc(10 * var(--p));
+    }
+
+    .portfolio-card,
+    .gallery-card {
+        height: auto;
+        padding: calc(5 * var(--p)) calc(5 * var(--p)) calc(6 * var(--p));
+    }
+
+    .portfolio-thumb,
+    .gallery-thumb {
+        height: calc(88 * var(--p));
+    }
+
+    .portfolio-info,
+    .gallery-info {
+        margin-top: calc(4 * var(--p));
+    }
+
+    .portfolio-name {
+        font-size: calc(11 * var(--p));
+    }
+
+    .portfolio-cat {
+        font-size: calc(7.5 * var(--p));
+    }
+
+    .btn-seemore-wrap {
+        margin-top: calc(12 * var(--p));
+    }
+
+    .btn-see-more-purple,
+    .btn-see-more-orange {
+        width: calc(72 * var(--p));
+        height: calc(14 * var(--p));
+        gap: calc(4 * var(--p));
+        border-radius: calc(5 * var(--p));
+        font-size: calc(7 * var(--p));
+    }
+
+    /* ---------- 3. หมวดหมู่ + แกลเลอรี ---------- */
+    .category-gallery-section {
+        padding: calc(12 * var(--p)) calc(12 * var(--p)) calc(24 * var(--p));
+    }
+
+    .category-gallery-section::before {
+        width: calc(70 * var(--p));
+        height: calc(26 * var(--p));
+        top: calc(-26 * var(--p));
+    }
+
+    .sticker-ee {
+        left: 0;
+        top: calc(-30 * var(--p));
+        width: calc(36 * var(--p));
+    }
+
+    .search-pill-input {
+        right: calc(6 * var(--p));
+        top: calc(-20 * var(--p));
+        width: calc(54 * var(--p));
+        height: calc(14 * var(--p));
+        padding: 0 calc(5 * var(--p));
+        border-width: 1px;
+        font-size: calc(7 * var(--p));
+    }
+
+    .search-pill-input input {
+        font-size: calc(6.5 * var(--p));
+    }
+
+    .category-tags {
+        grid-template-columns: repeat(4, 1fr);
+        gap: calc(6 * var(--p));
+    }
+
+    .tag-pill {
+        height: calc(14 * var(--p));
+        font-size: calc(6.3 * var(--p));
+        white-space: nowrap;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+    }
+
+    .tag-pill:nth-child(5),
+    .tag-pill:nth-child(6) {
+        width: calc(58 * var(--p));
+    }
+
+    .gallery-cards-3 {
+        margin-top: calc(12 * var(--p));
+    }
+
+    .gallery-artist-avatar {
+        right: calc(5 * var(--p));
+        bottom: calc(5 * var(--p));
+        width: calc(17 * var(--p));
+        height: calc(17 * var(--p));
+    }
+
+    .gallery-artist-avatar img {
+        border-width: 1px;
+    }
+
+    .gallery-artist-avatar::after {
+        width: calc(5 * var(--p));
+        height: calc(5 * var(--p));
+        border-width: 1px;
+    }
+
+    .category-gallery-section .btn-seemore-wrap {
+        margin-top: calc(14 * var(--p));
+    }
+
+    /* ---------- 4. ไลฟ์ ---------- */
+    .recommended-artists-section {
+        padding: calc(24 * var(--p)) 0 calc(24 * var(--p));
+    }
+}
+
+/* =====================================================
+   MOBILE – การ์ดโปรไฟล์ + Feedback (ใช้ร่วมกับ Search / Live)
+   1m = 1px ของแบบกว้าง 428px
+   ===================================================== */
+/* ปุ่มเปิด Feedback (แสดงเฉพาะมือถือ) */
+.btn-feedback {
+    display: none;
+}
+
+@media (max-width: 560px) {
+    :root {
+        --m: calc(100vw / 428);
+    }
+
+    /* ---------- โปรไฟล์ ---------- */
+    .profile-top-section {
+        flex-direction: column;
+        gap: calc(10 * var(--m));
+        padding: calc(20 * var(--m)) calc(20 * var(--m)) calc(10 * var(--m));
+    }
+
+    .profile-card-main,
+    .profile-feedback-box {
+        flex: none;
+        width: 100%;
+        border-radius: calc(3 * var(--m));
+    }
+
+    .profile-card-main {
+        height: calc(192 * var(--m));
+    }
+
+    .btn-settings {
+        top: calc(6 * var(--m));
+        right: calc(9 * var(--m));
+        font-size: calc(17 * var(--m));
+    }
+
+    .btn-feedback {
+        display: block;
+        position: absolute;
+        top: calc(6 * var(--m));
+        right: calc(36 * var(--m));
+        font-size: calc(17 * var(--m));
+        line-height: 1;
+        color: var(--violet);
+    }
+
+    .profile-avatar-wrap {
+        left: calc(24 * var(--m));
+        top: calc(24 * var(--m));
+        width: calc(104 * var(--m));
+        height: calc(134 * var(--m));
+    }
+
+    .profile-avatar-img {
+        border-width: calc(5 * var(--m));
+    }
+
+    .profile-username {
+        left: calc(140 * var(--m));
+        top: calc(28 * var(--m));
+        font-size: calc(17 * var(--m));
+    }
+
+    .profile-category {
+        left: calc(140 * var(--m));
+        top: calc(48 * var(--m));
+        font-size: calc(12 * var(--m));
+    }
+
+    .profile-followers {
+        left: calc(140 * var(--m));
+        top: calc(68 * var(--m));
+    }
+
+    .profile-followers strong,
+    .profile-followers span {
+        display: block;
+        font-size: calc(12 * var(--m));
+        font-weight: 400;
+        line-height: 1.25;
+    }
+
+    .palettes-rating {
+        left: calc(212 * var(--m));
+        top: calc(70 * var(--m));
+        gap: calc(2 * var(--m));
+        font-size: calc(16 * var(--m));
+    }
+
+    .profile-bio {
+        left: calc(142 * var(--m));
+        top: calc(102 * var(--m));
+        width: calc(232 * var(--m));
+        font-size: calc(10.5 * var(--m));
+        line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+    }
+
+    .profile-actions {
+        left: calc(144 * var(--m));
+        top: calc(152 * var(--m));
+        gap: calc(10 * var(--m));
+    }
+
+    .badge-live {
+        width: calc(52 * var(--m));
+        height: calc(16 * var(--m));
+        gap: calc(3 * var(--m));
+        font-size: calc(10 * var(--m));
+    }
+
+    .btn-icon-action {
+        font-size: calc(12 * var(--m));
+    }
+
+    .profile-socials {
+        right: calc(8 * var(--m));
+        bottom: calc(8 * var(--m));
+        gap: calc(4 * var(--m));
+        font-size: calc(13 * var(--m));
+    }
+
+    /* Feedback: ซ่อนไว้ กดไอคอนข้อความที่การ์ดเพื่อเปิด */
+    .profile-feedback-box {
+        display: none;
+        height: auto;
+        padding: calc(12 * var(--m)) calc(14 * var(--m));
+    }
+
+    .profile-top-section.show-feedback .profile-feedback-box {
+        display: flex;
+    }
+
+    .profile-feedback-box .feedback-header {
+        height: calc(22 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-title {
+        font-size: calc(16 * var(--m));
+    }
+
+    .profile-feedback-box .btn-more {
+        font-size: calc(15 * var(--m));
+    }
+
+    .profile-feedback-box .line {
+        height: calc(2 * var(--m));
+        margin-top: calc(5 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-list {
+        flex: none;
+        max-height: calc(200 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-item {
+        margin-top: calc(10 * var(--m));
+        gap: calc(6 * var(--m));
+    }
+
+    .profile-feedback-box .user-avatar {
+        width: calc(30 * var(--m));
+        height: calc(30 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-user {
+        font-size: calc(11 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-text {
+        font-size: calc(10 * var(--m));
+    }
+
+    .profile-feedback-box .feedback-input-bar {
+        margin-top: calc(10 * var(--m));
+        gap: calc(8 * var(--m));
+    }
+
+    .profile-feedback-box .my-profile,
+    .profile-feedback-box .btn-send {
+        font-size: calc(22 * var(--m));
+    }
+
+    .profile-feedback-box .comment input {
+        height: calc(18 * var(--m));
+        font-size: calc(10 * var(--m));
+        padding: 0 calc(8 * var(--m));
+    }
+}

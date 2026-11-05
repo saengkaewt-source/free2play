@@ -1,0 +1,573 @@
+:root {
+    --lp-blue: #5f73f6;
+    /* แฟ้มสีน้ำเงิน */
+    --lp-orange: #f4623a;
+    /* ส้มแดง */
+    --lp-dark: #3b2f40;
+    /* ม่วงเข้ม */
+    --lp-white: #ffffff;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.login-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
+    overflow-y: auto;
+
+    background: rgba(40, 28, 46, 0.45);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-family: 'Prompt', sans-serif;
+}
+
+.login-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* สไตล์สำหรับกล่องหน้า login.html ปกติ */
+.file-login {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    margin: 40px auto 0;
+}
+
+body>.choose {
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+/* ================== ตัวป๊อปอัพ ================== */
+.login-modal {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    margin: auto;
+    transform: translateY(20px) scale(0.96);
+    transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+.login-overlay.active .login-modal {
+    transform: translateY(0) scale(1);
+}
+
+.login-modal,
+.login-modal input,
+.login-modal button,
+.login-modal textarea,
+.login-modal select {
+    font-family: 'Prompt', sans-serif;
+}
+
+.login-modal *,
+.login-modal *::before,
+.login-modal *::after {
+    box-sizing: border-box;
+}
+
+/* คืนค่าฟอนต์ Font Awesome ไม่ให้ฟอนต์ข้อความทับตัวไอคอน */
+.login-modal i[class*="fa-"],
+.login-modal [class*="fa-"]::before,
+.login-modal [class*="fa-"]::after,
+.box-login i[class*="fa-"],
+.box-login [class*="fa-"]::before,
+.box-login [class*="fa-"]::after,
+.choose i[class*="fa-"],
+.choose [class*="fa-"]::before,
+.choose [class*="fa-"]::after {
+    font-family: var(--fa-style-family, "Font Awesome 6 Free") !important;
+}
+
+.login-modal .fa-brands,
+.login-modal .fa-brands::before,
+.login-modal [class*="fa-brands"]::before,
+.box-login .fa-brands,
+.box-login [class*="fa-brands"]::before,
+.choose .fa-brands,
+.choose [class*="fa-brands"]::before {
+    font-family: "Font Awesome 6 Brands" !important;
+}
+
+/* ================== สติ๊กเกอร์โลโก้มุมซ้ายบน ================== */
+.login-modal .logo-web {
+    position: absolute;
+    top: -28px;
+    left: -26px;
+    z-index: 5;
+    width: 150px;
+    height: 150px;
+    padding: 14px;
+    object-fit: contain;
+}
+
+/* ================== แฟ้มสีน้ำเงิน ================== */
+.box-login {
+    position: relative;
+    background: #6173F4;
+    border-radius: 14px 0 0 0;
+    padding: 36px 36px 34px;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+/* แท็บของแฟ้มมุมขวาบน */
+.box-login::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 36%;
+    height: 31px;
+    background: var(--lp-blue);
+    border-radius: 12px 12px 0 0;
+    clip-path: polygon(0 100%, 10% 0, 100% 0, 100% 100%);
+}
+
+/* ปุ่มปิด */
+.btn-close {
+    position: absolute;
+    top: -26px;
+    right: 14px;
+    z-index: 3;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: var(--lp-white);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-close:hover {
+    transform: rotate(90deg);
+}
+
+/* ================== หัวข้อ ================== */
+.head-title {
+    margin: 0 0 26px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--lp-white);
+}
+
+.head-title strong {
+    font-weight: 700;
+}
+
+/* ================== ฟอร์ม ================== */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 0 10px;
+}
+
+.input-field {
+    width: 100%;
+    height: 36px;
+    padding: 0 12px;
+    border: none;
+    border-radius: 6px;
+    background: var(--lp-white);
+    color: #333;
+    font-size: 14px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-field::placeholder {
+    color: #555;
+}
+
+.input-field:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.45);
+}
+
+.box-password {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.your-password {
+    position: relative;
+    flex: 1;
+}
+
+.input-pass {
+    padding-right: 150px;
+}
+
+.pass-actions {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.forgot-link {
+    font-size: 10px;
+    color: var(--lp-blue);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+.btn-eye {
+    border: none;
+    background: transparent;
+    padding: 0;
+    font-size: 14px;
+    color: #222;
+    cursor: pointer;
+}
+
+/* โซเชียล */
+.social-login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon {
+    color: var(--lp-white);
+    font-size: 22px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.18);
+}
+
+/* ปุ่ม login */
+.login-btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.btn-login {
+    width: 150px;
+    height: 26px;
+    border: none;
+    border-radius: 3px;
+    background: var(--lp-orange);
+    color: var(--lp-white);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.2s, transform 0.2s;
+}
+
+.btn-login:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* เส้นคั่น */
+.login-line {
+    width: 100%;
+    height: 2px;
+    margin: 30px auto 28px;
+    background: var(--lp-white);
+    border-radius: 2px;
+}
+
+/* ================== ความสนใจ ================== */
+.interest-title {
+    margin: 0 0 18px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--lp-white);
+}
+
+.interest-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tags-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.login-tag,
+.role-pill {
+    border: none;
+    border-radius: 20px;
+    background: var(--lp-white);
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+.login-tag {
+    padding: 6px 18px;
+    white-space: nowrap;
+}
+
+.login-tag:hover,
+.role-pill:hover {
+    transform: translateY(-2px);
+}
+
+.login-tag.active {
+    background: var(--lp-orange);
+    color: var(--lp-white);
+}
+
+/* ================== กล่องเลือก Role (แถบส้มด้านล่าง) ================== */
+.choose {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 30px;
+    background: var(--lp-orange);
+    border-radius: 0 0 14px 14px;
+    color: var(--lp-white);
+}
+
+.choose-title {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+}
+
+.choose-title svg,
+.choose-title i {
+    font-size: 22px;
+}
+
+.choose-roles {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.role-pill {
+    padding: 3px 14px;
+    font-size: 11px;
+}
+
+.role-pill.active {
+    background: var(--lp-dark);
+    color: var(--lp-white);
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 600px) {
+
+    .login-modal,
+    .file-login,
+    body>.choose {
+        max-width: 100%;
+    }
+
+    .box-login {
+        padding: 34px 20px 28px;
+    }
+
+    .login-form {
+        padding: 0;
+    }
+
+    .head-title {
+        font-size: 30px;
+    }
+
+    .tags-row {
+        gap: 8px;
+    }
+
+    .login-tag {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .choose {
+        padding: 16px 20px;
+    }
+
+    .choose-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 440px) {
+    .tags-row {
+        gap: 6px;
+    }
+
+    .login-tag {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+}
+
+/* =====================================================
+   ป๊อปอัปขนาดใหญ่ (จอกว้างกว่า 600px)
+   ===================================================== */
+@media (min-width: 601px) {
+    .login-modal {
+        max-width: 780px;
+    }
+
+    .login-modal .logo-web {
+        top: -40px;
+        left: -36px;
+        width: 200px;
+        height: 200px;
+        padding: 18px;
+    }
+
+    .login-modal .box-login {
+        padding: 50px 56px 46px;
+        margin-top: 40px;
+        border-radius: 18px 0 0 0;
+    }
+
+    .login-modal .box-login::before {
+        top: -40px;
+        height: 41px;
+    }
+
+    .login-modal .btn-close {
+        top: -34px;
+        right: 22px;
+        width: 32px;
+        height: 32px;
+        font-size: 22px;
+    }
+
+    .login-modal .head-title {
+        margin-bottom: 36px;
+        font-size: 52px;
+    }
+
+    .login-modal .login-form {
+        gap: 20px;
+        padding: 0 14px;
+    }
+
+    .login-modal .input-field {
+        height: 48px;
+        padding: 0 16px;
+        border-radius: 8px;
+        font-size: 17px;
+    }
+
+    .login-modal .input-pass {
+        padding-right: 200px;
+    }
+
+    .login-modal .box-password {
+        gap: 24px;
+    }
+
+    .login-modal .pass-actions {
+        right: 14px;
+        gap: 12px;
+    }
+
+    .login-modal .forgot-link {
+        font-size: 13px;
+    }
+
+    .login-modal .btn-eye {
+        font-size: 19px;
+    }
+
+    .login-modal .social-login {
+        gap: 14px;
+    }
+
+    .login-modal .social-icon {
+        font-size: 30px;
+    }
+
+    .login-modal .login-btn-wrap {
+        margin-top: 12px;
+    }
+
+    .login-modal .btn-login {
+        width: 210px;
+        height: 38px;
+        border-radius: 5px;
+        font-size: 17px;
+    }
+
+    .login-modal .login-line {
+        margin: 40px auto 36px;
+        height: 3px;
+    }
+
+    .login-modal .interest-title {
+        margin-bottom: 26px;
+        font-size: 30px;
+    }
+
+    .login-modal .interest-tags {
+        gap: 14px;
+    }
+
+    .login-modal .tags-row {
+        gap: 16px;
+    }
+
+    .login-modal .login-tag {
+        padding: 9px 26px;
+        font-size: 16px;
+    }
+
+    .login-modal .choose {
+        padding: 24px 40px;
+        border-radius: 0 0 18px 18px;
+    }
+
+    .login-modal .choose-title {
+        gap: 12px;
+        font-size: 32px;
+    }
+
+    .login-modal .choose-roles {
+        gap: 12px;
+    }
+
+    .login-modal .role-pill {
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}

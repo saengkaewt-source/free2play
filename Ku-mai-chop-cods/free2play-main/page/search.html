@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon+webname -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <title>Free2Pay — Search</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/login.css">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts: Prompt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="menu">
+        <button class="menu-toggle" aria-label="เมนู"
+            aria-expanded="false"><span></span><span></span><span></span></button>
+        <a href="../page/index.html">
+            <img src="../images/logo_white.png" alt="Free2Pay" class="logo_home">
+        </a>
+        <div class="menubar">
+            <div class="menu-links">
+                <a href="../page/index.html">Home</a>
+                <a href="../page/search.html" class="active" aria-current="page">Search</a>
+                <a href="../page/live.html">Live</a>
+                <div class="login">
+                    <a href="../page/login.html">Log in</a>
+                </div>
+            </div>
+            <div class="profile">
+                <a href="../page/profile.html" aria-label="Profile"><i class="fa-regular fa-circle-user"></i></a>
+            </div>
+        </div>
+    </nav><!--menu-->
+
+    <!-- ==================== 1. PROFILE TOP SECTION ==================== -->
+    <section class="profile-top-section">
+
+        <!-- ฝั่งซ้าย: การ์ดโปรไฟล์ -->
+        <div class="profile-card-main">
+            <button class="btn-feedback" aria-label="Feedback" id="feedbackToggle">
+                <i class="fa-regular fa-comment-dots"></i>
+            </button>
+
+            <!-- ปุ่มตั้งค่า -->
+            <button class="btn-settings" aria-label="Settings">
+                <i class="fa-solid fa-gear"></i>
+            </button>
+
+            <!-- รูปโปรไฟล์ -->
+            <div class="profile-avatar-wrap">
+                <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/883485897_1159439039943317_4699030937222057053_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ajFt-55mDacQ7kNvwEYJ7OX&_nc_oc=Adp71mjwmbYsweRHOpnMDV3c4wqErwLCiheTl4XRYfN32zaVtIqtTpVkifXOi4yxydc&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_ss=7aaaf&oh=03_Q7cD6wGJ5N0sSH_RA7ZdSY0RK3-6T7AcL32xLe_9rTDYJmOWaw&oe=6B13FCCE"
+                    alt="LO/OFer" class="profile-avatar-img">
+                <div class="status-on"></div>
+            </div>
+
+            <!-- ชื่อ & หมวดหมู่ -->
+            <h2 class="profile-username">c.tax_c4</h2>
+            <p class="profile-category">artist</p>
+            <div class="profile-followers"><strong>67k</strong><span>Followers</span></div>
+
+            <!-- ดาวจานสีเรตติ้ง -->
+            <div class="palettes-rating">
+                <i class="fa-solid fa-palette"></i>
+                <i class="fa-solid fa-palette"></i>
+                <i class="fa-solid fa-palette"></i>
+                <i class="fa-solid fa-palette"></i>
+                <i class="fa-solid fa-palette"></i>
+            </div>
+
+            <!-- ปุ่มแอ็คชัน -->
+            <div class="profile-actions">
+                <span class="badge-live"><i class="fa-solid fa-circle"></i> LIVE</span>
+                <button class="btn-icon-action" aria-label="Message">
+                    <i class="fa-regular fa-comment-dots"></i>
+                </button>
+            </div>
+
+            <!-- ข้อความแนะนำตัว -->
+            <p class="profile-bio">
+                สวัสดีค่า ชื่อ เชียร์ เป็นนักวาดฟรีแลนซ์<br>
+                รับวาดภาพดิจิทัลทุกแนวคับ
+            </p>
+
+            <!-- Social Media -->
+            <div class="profile-socials">
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+
+        </div><!-- profile-card-main -->
+
+        <!-- ฝั่งขวา: Feedback -->
+        <div class="profile-feedback-box">
+            <div class="feedback-header">
+                <h3 class="feedback-title">Feedback</h3>
+                <button class="btn-more" aria-label="More"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="feedback-list">
+                <div class="feedback-item">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=100" alt=""
+                        class="user-avatar">
+                    <div class="feedback-content">
+                        <span class="feedback-user">Wafflesss</span>
+                        <p class="feedback-text">สวยมากๆ เลยครับ! ชอบการลงสีมาก</p>
+                    </div>
+                </div>
+                <div class="feedback-item">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=100" alt=""
+                        class="user-avatar">
+                    <div class="feedback-content">
+                        <span class="feedback-user">zub04uctka</span>
+                        <p class="feedback-text">งานดีมากเลย เส้นคมสวยสุดๆ อนาคตไกลแน่นอน</p>
+                    </div>
+                </div>
+                <div class="feedback-item">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100" alt=""
+                        class="user-avatar">
+                    <div class="feedback-content">
+                        <span class="feedback-user">aWful</span>
+                        <p class="feedback-text">ไว้จะกลับมาจ้างอีกนะค้าบ งานตึงๆโหดๆ</p>
+                    </div>
+                </div>
+                <div class="feedback-item">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100" alt=""
+                        class="user-avatar">
+                    <div class="feedback-content">
+                        <span class="feedback-user">itssfine</span>
+                        <p class="feedback-text">ผลงานของคุณดีมากๆ รับประกันจากคนเคยจ้าง</p>
+                    </div>
+                </div>
+                <div class="feedback-item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt=""
+                        class="user-avatar">
+                    <div class="feedback-content">
+                        <span class="feedback-user">stavn</span>
+                        <p class="feedback-text">งานดีตลอดคนนี้ ชอบมากครับ</p>
+                    </div>
+                </div>
+            </div><!-- feedback-list -->
+
+            <div class="feedback-input-bar">
+                <div class="my-profile"><i class="fa-regular fa-circle-user"></i></div>
+                <div class="comment"><input type="text" placeholder="..."></div>
+                <button class="btn-send"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+        </div><!-- profile-feedback-box -->
+
+    </section><!-- profile-top-section -->
+
+    <!-- ==================== 2. CALENDAR & PORTFOLIO ==================== -->
+    <section class="calendar-portfolio-section">
+
+        <!-- แถบปฏิทิน -->
+        <div class="calendar-bar" id="calendarToggle" role="button" tabindex="0" aria-expanded="false"
+            aria-controls="calendarPanel">
+            <div class="calendar-bar-left">
+                <i class="fa-regular fa-calendar"></i>
+                <span>ปฏิทิน</span>
+            </div>
+            <div class="calendar-bar-right">
+                <button aria-label="Filter"><i class="icon-tri"></i></button>
+                <button aria-label="Menu"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+            </div>
+        </div>
+
+
+        <!-- ปฏิทิน: เปิดเมื่อกดแถบ "ปฏิทิน" -->
+        <div class="calendar-panel" id="calendarPanel">
+            <div class="cal-head">
+                <span class="cal-month"><i class="icon-tri"></i> ตุลาคม 2569</span>
+                <a href="#" class="btn-hire"><i class="fa-regular fa-envelope"></i> จ้างงาน</a>
+            </div>
+            <div class="cal-line"></div>
+            <div class="cal-weekdays">
+                <span>อา.</span><span>จ.</span><span>อ.</span><span>พ.</span><span>พฤ.</span><span>ศ.</span><span>ส.</span>
+            </div>
+            <div class="cal-grid">
+                <span class="cal-day out"><b>27</b></span>
+                <span class="cal-day out"><b>28</b></span>
+                <span class="cal-day out"><b>29</b></span>
+                <span class="cal-day out"><b>30</b></span>
+                <span class="cal-day"><b>1</b></span>
+                <span class="cal-day"><b>2</b></span>
+                <span class="cal-day"><b>3</b></span>
+                <span class="cal-day"><b>4</b></span>
+                <span class="cal-day"><b>5</b></span>
+                <span class="cal-day"><b>6</b></span>
+                <span class="cal-day"><b>7</b></span>
+                <span class="cal-day"><b>8</b></span>
+                <span class="cal-day"><b>9</b></span>
+                <span class="cal-day"><b>10</b></span>
+                <span class="cal-day"><b>11</b></span>
+                <span class="cal-day range-start"><b>12</b></span>
+                <span class="cal-day range-mid"><b>13</b></span>
+                <span class="cal-day range-mid"><b>14</b></span>
+                <span class="cal-day range-mid"><b>15</b></span>
+                <span class="cal-day range-end"><b>16</b></span>
+                <span class="cal-day"><b>17</b></span>
+                <span class="cal-day"><b>18</b></span>
+                <span class="cal-day"><b>19</b></span>
+                <span class="cal-day"><b>20</b></span>
+                <span class="cal-day"><b>21</b></span>
+                <span class="cal-day"><b>22</b></span>
+                <span class="cal-day"><b>23</b></span>
+                <span class="cal-day"><b>24</b></span>
+                <span class="cal-day"><b>25</b></span>
+                <span class="cal-day"><b>26</b></span>
+                <span class="cal-day"><b>27</b></span>
+                <span class="cal-day"><b>28</b></span>
+                <span class="cal-day"><b>29</b></span>
+                <span class="cal-day"><b>30</b></span>
+                <span class="cal-day"><b>31</b></span>
+            </div>
+            <div class="cal-note">
+                <span class="cal-note-tag">12 - 16 ตุลาคม 2569</span>
+                <div class="cal-note-box">
+                    <ul>
+                        <li>คิวไม่ว่าง ติดงานลูกค้าค่ะ</li>
+                    </ul>
+                    <button aria-label="Edit"><i class="fa-regular fa-pen-to-square"></i></button>
+                </div>
+            </div>
+        </div><!-- calendar-panel -->
+
+        <!-- Grid ผลงาน 6 ช่อง -->
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <img src="https://scontent-bkk1-1.xx.fbcdn.net/v/t1.15752-9/892286234_2317978182325381_402940667007407410_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=kj8_qOWT_DgQ7kNvwHRHIYA&_nc_oc=AdpsfE-WGoYMCyHV6Cb7VoCVNSVpJziUc54DiU731-ut7TdNbDVV-v6gKu75EmWeszQ&_nc_zt=23&_nc_ht=scontent-bkk1-1.xx&_nc_ss=7aaaf&oh=03_Q7cD6wHCBdzqCT2uLNCP3GMYP7izAHrEL1_x6HX5nS4NbEq00Q&oe=6B142779"
+                    alt="Art 1" class="portfolio-thumb">
+                <div class="portfolio-info">
+                    <p class="portfolio-name">The Winding Path</p>
+                    <p class="portfolio-cat">Digital Art</p>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/884841559_1432342208537421_993199780312137299_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Czco8X1DdDgQ7kNvwGnN4f-&_nc_oc=AdqvcQptJflLTno84Y-BfgU8qgiI73gfer6pD9JeF--ZsK9bb3hopejJNnNG3oyaR2Y&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_ss=7aaaf&oh=03_Q7cD6wG1OXKcLQQJZ5YUuchwn1ZrYYovea1csnxPYbqdIXqCmw&oe=6B13FAD4"
+                    alt="Art 2" class="portfolio-thumb">
+                <div class="portfolio-info">
+                    <p class="portfolio-name">Echoes of Abstraction</p>
+                    <p class="portfolio-cat">Digital Art</p>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/887729303_1781038673453761_2678135691867452531_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=pkkaOQW9OZIQ7kNvwHsgGx1&_nc_oc=Ado2ZedY-6qFj4KVmKSMNZ5L3FpxcHwO7htkft9i7gX5qGlldNJoXOHFEMd2GY7Sq-Y&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_ss=7aaaf&oh=03_Q7cD6wGJKy6CVJgJL0_NEXTDdAPpuB-6yVLJx6ZFs-2VmGJ-kg&oe=6B140779"
+                    alt="Art 3" class="portfolio-thumb">
+                <div class="portfolio-info">
+                    <p class="portfolio-name">Inner Palette</p>
+                    <p class="portfolio-cat">Digital Art</p>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/884182328_1410757184378252_3318161487479330961_n.png?stp=dst-png_s960x960&_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=xtYmQQSuycUQ7kNvwEe10N4&_nc_oc=AdorC8CrWPsRPqSVXevGkzj2M9-_j_WrC8CiV3kfWy098xGncme8FPXb_fAVBRx3aaI&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_ss=7aaaf&oh=03_Q7cD6wHLNJsl3oZYIT8vIEhsaMzmZdXYxWV5RYYP7gqJlh2EvQ&oe=6B14218A"
+                    alt="Art 4" class="portfolio-thumb">
+                <div class="portfolio-info">
+                    <p class="portfolio-name">Echoes of Abstraction</p>
+                    <p class="portfolio-cat">Character Design</p>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/891926190_1156323593646799_5769075091131296999_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=3zmRrXhmB8cQ7kNvwEr6yTK&_nc_oc=AdoOZ3otgcfMKuOMI6XSWkhWklf3fn5KeTLTyLOEe2nzgAA8-lYhx1uofpuEEDN-7cU&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_ss=7aaaf&oh=03_Q7cD6wF6A35p6d5Z-x5PzxOVspC20el6fB2vhQRsxkkijaFlBA&oe=6B1416F8"
+                    alt="Art 5" class="portfolio-thumb">
+                <div class="portfolio-info">
+                    <p class="portfolio-name">Childhood</p>
+                    <p class="portfolio-cat">Character Design</p>
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <img src="https://scontent-bkk1-2.xx.fbcdn.net/v/t1.15752-9/886549024_1142066928385079_3904034027214665756_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Egvm40M5kh8Q7kNvwH19UTo&_nc_oc=AdoLSMG-KjROl-T2cdOPsNdn5NcpOFq107gy6n24LTs6-BymsFwQ3kiiyFxQZpLE_X0&_nc_zt=23&_nc_ht=scontent-bkk1-2.xx&_nc_ss=7aaaf&oh=03_Q7cD6wFuLyEIDIyXgTDt1oPBqpV01uhKH8z-wwxP3xCrNH1uQg&oe=6B1400E3"
+                    alt="Art 6" class="portfolio-thumb">
+                <div class="portfolio-info">
+                    <p class="portfolio-name">Summer Serenade</p>
+                    <p class="portfolio-cat">Character Design</p>
+                </div>
+            </div>
+        </div><!-- portfolio-grid -->
+
+        <div class="btn-seemore-wrap">
+            <a href="#" class="btn-see-more-purple">SEE MORE <i class="icon-tri"></i></a>
+        </div>
+
+    </section><!-- calendar-portfolio-section -->
+
+    <!-- ==================== 3. CATEGORY & GALLERY ==================== -->
+    <section class="category-gallery-section">
+
+        <!-- แถบค้นหา + สติ๊กเกอร์ -->
+        <div class="category-search-bar">
+            <div class="sticker-ee">
+                <img src="../images/logoinpage.png" alt="ee logo">
+            </div>
+            <div class="search-pill-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="ค้นหา..">
+            </div>
+        </div>
+
+        <!-- Tag หมวดหมู่ -->
+        <div class="category-tags">
+            <a href="#" class="tag-pill">UXUI Design</a>
+            <a href="#" class="tag-pill">Digital Art</a>
+            <a href="#" class="tag-pill">UX/UI Design</a>
+            <a href="#" class="tag-pill">Handmade</a>
+            <a href="#" class="tag-pill">Graphic Design</a>
+            <a href="#" class="tag-pill">Traditional Art</a>
+        </div>
+
+        <!-- Gallery ผลงาน 3 ช่อง -->
+        <div class="gallery-cards-3">
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=400&auto=format&fit=crop&q=60"
+                    alt="Gallery 1" class="gallery-thumb">
+                <div class="gallery-info">
+                    <p class="portfolio-name">Whispers of ...</p>
+                    <p class="portfolio-cat">Traditional Art</p>
+                </div>
+                <div class="gallery-artist-avatar">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" alt="">
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1765814142702-52474219184e?w=400&auto=format&fit=crop&q=60"
+                    alt="Gallery 2" class="gallery-thumb">
+                <div class="gallery-info">
+                    <p class="portfolio-name">The Winding P...</p>
+                    <p class="portfolio-cat">Traditional Art</p>
+                </div>
+                <div class="gallery-artist-avatar">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=80" alt="">
+                </div>
+            </div>
+            <div class="gallery-card">
+                <img src="https://images.unsplash.com/photo-1770129703548-e1ced0e4f118?w=400&auto=format&fit=crop&q=60"
+                    alt="Gallery 3" class="gallery-thumb">
+                <div class="gallery-info">
+                    <p class="portfolio-name">Inner Palette</p>
+                    <p class="portfolio-cat">Traditional Art</p>
+                </div>
+                <div class="gallery-artist-avatar">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80" alt="">
+                </div>
+            </div>
+            <div class="gallery-card gallery-card-extra">
+                <img src="https://images.unsplash.com/photo-1618788372246-79faff0c3742?w=400&auto=format&fit=crop&q=60"
+                    alt="Gallery 4" class="gallery-thumb">
+                <div class="gallery-info">
+                    <p class="portfolio-name">Name Art</p>
+                    <p class="portfolio-cat">ประเภทงาน</p>
+                </div>
+                <div class="gallery-artist-avatar">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80" alt="">
+                </div>
+            </div>
+        </div><!-- gallery-cards-3 -->
+
+        <div class="btn-seemore-wrap">
+            <a href="#" class="btn-see-more-orange">SEE MORE <i class="icon-tri"></i></a>
+        </div>
+
+    </section><!-- category-gallery-section -->
+
+    <!-- ==================== 4. RECOMMENDED ARTISTS ==================== -->
+    <section class="recommended-artists-section">
+        <div class="box-live">
+            <div class="video-livebox">
+                <div class="but-liveplay">
+                    <div class="play"></div>
+                    <div class="text-live">LIVE</div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1744686909443-eb72a54de998?w=300&auto=format&fit=crop&q=60"
+                    alt="" class="video">
+                <div class="profile-bar">
+                    <div class="profile-img"><img
+                            src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="status-on"></div>
+                    </div>
+                </div>
+                <div class="username-box">
+                    <div class="title-username">Evelyn</div>
+                    <div class="category-user">Digital Art</div>
+                </div>
+            </div>
+            <div class="video-livebox">
+                <div class="but-liveplay">
+                    <div class="play"></div>
+                    <div class="text-live">LIVE</div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1648312182804-346237fbc0ea?w=300&auto=format&fit=crop&q=60"
+                    alt="" class="video">
+                <div class="profile-bar">
+                    <div class="profile-img"><img
+                            src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="status-on"></div>
+                    </div>
+                </div>
+                <div class="username-box">
+                    <div class="title-username">Lee</div>
+                    <div class="category-user">UXUI Design</div>
+                </div>
+            </div>
+            <div class="video-livebox">
+                <div class="but-liveplay">
+                    <div class="play"></div>
+                    <div class="text-live">LIVE</div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1780736309282-7af387641534?w=300&auto=format&fit=crop&q=60"
+                    alt="" class="video">
+                <div class="profile-bar">
+                    <div class="profile-img"><img
+                            src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="status-on"></div>
+                    </div>
+                </div>
+                <div class="username-box">
+                    <div class="title-username">Mark</div>
+                    <div class="category-user">Handmade</div>
+                </div>
+            </div>
+            <div class="video-livebox">
+                <div class="but-liveplay">
+                    <div class="play"></div>
+                    <div class="text-live">LIVE</div>
+                </div>
+                <img src="https://plus.unsplash.com/premium_photo-1679811672048-9d4b810a7588?w=300&auto=format&fit=crop&q=60"
+                    alt="" class="video">
+                <div class="profile-bar">
+                    <div class="profile-img"><img
+                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                            alt="">
+                        <div class="status-on"></div>
+                    </div>
+                </div>
+                <div class="username-box">
+                    <div class="title-username">May</div>
+                    <div class="category-user">Traditional Art</div>
+                </div>
+            </div>
+        </div>
+
+    </section><!-- recommended-artists-section -->
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html">
+                    <img src="../images/logo_white.png" alt="Free2Pay" class="footer-logo">
+                </a>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-col">
+                    <h4 class="footer-title">Home</h4>
+                    <ul class="footer-list">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="live.html">Live</a></li>
+                        <li><a href="search.html">Category</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><a href="#">popular</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Live</h4>
+                    <ul class="footer-list">
+                        <li><a href="live.html">Calender</a></li>
+                    </ul>
+                    <h4 class="footer-title search-title"><a href="search.html">Search</a></h4>
+                </div>
+            </div>
+            <div class="footer-apps">
+                <a href="#" class="app-icon" title="App Store">
+                    <i class="fa-brands fa-app-store-ios"></i>
+                </a>
+                <a href="#" class="app-icon" title="Google Play">
+                    <i class="fa-brands fa-google-play"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>COPYRIGHT2026 FREE2PAY.ONLINE THAILAND ,2026</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // มือถือ: กดไอคอนข้อความเพื่อเปิด/ปิด Feedback
+        document.getElementById('feedbackToggle').addEventListener('click', function () {
+            document.querySelector('.profile-top-section').classList.toggle('show-feedback');
+        });
+
+        (function () {
+            var bar = document.getElementById('calendarToggle');
+            var sec = bar.closest('.calendar-portfolio-section');
+            function toggle() {
+                var open = sec.classList.toggle('is-open');
+                bar.setAttribute('aria-expanded', open);
+            }
+            bar.addEventListener('click', function (e) { if (!e.target.closest('.calendar-bar-right')) toggle(); });
+            bar.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+            });
+        })();
+    </script>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>
